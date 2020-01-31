@@ -103,6 +103,7 @@
 		5AEEF17523E3D9BA00B21E0D /* TopTabBarContainerModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEEF16D23E3D9BA00B21E0D /* TopTabBarContainerModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5AEEF17A23E3D9D100B21E0D /* TopTabBarContainerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF17923E3D9D100B21E0D /* TopTabBarContainerModule.swift */; };
 		5AEEF17C23E3D9E600B21E0D /* TopTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF17B23E3D9E600B21E0D /* TopTabBarController.swift */; };
+		5AEEF18123E3DAF100B21E0D /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF18023E3DAF100B21E0D /* CGSize.swift */; };
 		9716375B23DE511400888D1C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716375A23DE511400888D1C /* APIKey.swift */; };
 		9762A92323DE2C1D005C3A4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9762A92223DE2C1D005C3A4D /* AppDelegate.swift */; };
 		9762A92C23DE2C1F005C3A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9762A92B23DE2C1F005C3A4D /* Assets.xcassets */; };
@@ -317,6 +318,7 @@
 		5AEEF17023E3D9BA00B21E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AEEF17923E3D9D100B21E0D /* TopTabBarContainerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBarContainerModule.swift; sourceTree = "<group>"; };
 		5AEEF17B23E3D9E600B21E0D /* TopTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBarController.swift; sourceTree = "<group>"; };
+		5AEEF18023E3DAF100B21E0D /* CGSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
 		5C389B0C2C526B4252DA6503 /* Pods_Modules_CFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_CFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7202B312051B7C398B923318 /* Pods_Modules_TopTabBarContainerModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_TopTabBarContainerModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDB5C5022129D8204527F9D /* Pods-Modules-BusinessDetailModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-BusinessDetailModule.debug.xcconfig"; path = "Target Support Files/Pods-Modules-BusinessDetailModule/Pods-Modules-BusinessDetailModule.debug.xcconfig"; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 		5AEEF04023E39C3800B21E0D /* CUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				5AEEF17F23E3DAE100B21E0D /* Extensions */,
 				5AEEF15F23E3D6FA00B21E0D /* Buttons */,
 				5AEEF04E23E39C4E00B21E0D /* UICollectionViewCells */,
 				5AEEF04B23E39C4E00B21E0D /* UIView */,
@@ -795,6 +798,14 @@
 				5AEEF17023E3D9BA00B21E0D /* Info.plist */,
 			);
 			path = TopTabBarContainerModule;
+			sourceTree = "<group>";
+		};
+		5AEEF17F23E3DAE100B21E0D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5AEEF18023E3DAF100B21E0D /* CGSize.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9762A91623DE2C1D005C3A4D = {
@@ -1376,6 +1387,7 @@
 				5AEEF16123E3D70300B21E0D /* Button.swift in Sources */,
 				5AEEF15523E3C9FC00B21E0D /* ImageTitleCell.swift in Sources */,
 				5AEEF12E23E3BF8B00B21E0D /* UIView+Border.swift in Sources */,
+				5AEEF18123E3DAF100B21E0D /* CGSize.swift in Sources */,
 				5AEEF05B23E39C4E00B21E0D /* TitleViewProtocol.swift in Sources */,
 				5AEEF05C23E39C4E00B21E0D /* ImageDetailsCellProtocol.swift in Sources */,
 				5AEEF16523E3D73D00B21E0D /* ButtonCell.swift in Sources */,

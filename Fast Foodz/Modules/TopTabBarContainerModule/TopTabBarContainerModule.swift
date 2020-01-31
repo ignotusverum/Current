@@ -10,14 +10,6 @@ import UIKit
 import ThemeManager
 import MERLin
 
-public extension CGSize {
-    static func > (_ lhs: CGSize,
-                   _ rhs: CGSize) -> Bool {
-        return lhs.width > rhs.width || lhs.height > rhs.height
-    }
-}
-
-
 class ContainerTopTabBarController: TopTabBarController, Themed {
     override func viewDidLoad() {
         super.viewDidLoad()
