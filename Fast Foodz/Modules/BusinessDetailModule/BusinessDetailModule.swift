@@ -12,7 +12,11 @@ public class BusinessDetailModuleContext: ModuleContextProtocol {
     public typealias ModuleType = BusinessDetailModules
     public var routingContext: String
     
-    public init(routingContext: String) {
+    public var details: Business
+    
+    public init(details: Business,
+                routingContext: String) {
+        self.details = details
         self.routingContext = routingContext
     }
     
@@ -37,6 +41,13 @@ public class BusinessDetailModules: ModuleProtocol, EventsProducer {
     }
     
     public func unmanagedRootViewController() -> UIViewController {
-        return UIViewController()
+        let section = BusinessDetailsSection(model: context.details)
+        let viewModel = BusinessDetailsViewModel(model: context.details,
+                                                 events: _events)
+        
+        let controller = BusinessDetailViewController(viewModel: viewModel,
+                                                      datasource: section)
+        
+        return controller
     }
 }

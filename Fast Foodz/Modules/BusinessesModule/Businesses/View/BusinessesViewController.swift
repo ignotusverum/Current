@@ -98,7 +98,7 @@ class BusinessesViewController: UIViewController, UICollectionViewDelegateFlowLa
             .subscribe(onNext: { [weak self] indexPath in
                 guard let self = self else { return }
                 let row = self.dataSource[indexPath]
-                self.actions.onNext(.businessIdSelected(row.title))
+                self.actions.onNext(.businessSelected(row.model))
             })
             .disposed(by: disposeBag)
         

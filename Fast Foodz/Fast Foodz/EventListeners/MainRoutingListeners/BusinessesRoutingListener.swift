@@ -17,10 +17,10 @@ class BusinessesRoutingListener: ModuleEventsListener {
     func listenEvents(from module: AnyEventsProducerModule,
                       events: Observable<BusinessesEvent>) -> Bool {
         
-        events.capture(case: BusinessesEvent.businessIdSelected)
+        events.capture(case: BusinessesEvent.businessSelected)
             .toRoutableObservable()
-            .subscribe(onNext: { businessId in
-                let detailsStep = PresentableRoutingStep(withStep: .businessDetails(),
+            .subscribe(onNext: { details in
+                let detailsStep = PresentableRoutingStep(withStep: .businessDetails(details),
                                                          presentationMode: .push(withCloseButton: .none),
                                                          animated: true)
                 

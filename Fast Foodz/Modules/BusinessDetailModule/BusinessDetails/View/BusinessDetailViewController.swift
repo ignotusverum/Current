@@ -130,8 +130,16 @@ class BusinessDetailViewController: UIViewController, UICollectionViewDelegateFl
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: collectionView.frame.width,
-               height: 80)
+        let model = dataSource[indexPath]
+        
+        var size: CGSize
+        switch model {
+        case .header(_): size = CGSize(width: collectionView.frame.width, height: 230)
+        case .map(_): size = CGSize(width: collectionView.frame.width, height: 340)
+        case .numberButton(_): size = CGSize(width: collectionView.frame.width, height: 100)
+        }
+        
+        return size
     }
     
     private func createAnimatableSection(_ model: BusinessDetailsSection)-> AnimatableSectionModel<String, BusinessDetailCellType> {

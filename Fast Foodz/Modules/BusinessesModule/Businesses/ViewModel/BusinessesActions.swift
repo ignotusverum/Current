@@ -10,7 +10,7 @@ import CFoundation
 
 enum BusinessesUIAction: EventProtocol {
     case reload
-    case businessIdSelected(String)
+    case businessSelected(Business)
 }
 
 enum BusinessesModelAction: EventProtocol {

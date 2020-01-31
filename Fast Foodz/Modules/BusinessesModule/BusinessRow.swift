@@ -23,10 +23,12 @@ struct BusinessRow: Equatable {
     
     let imageUrl: URL?
     
+    let model: Business
+    
     init(model: Business) {
+        self.model = model
         type = .mexican
         imageUrl = model.imageURL
-        
         title = model.name
         
         let distance = "\(Int(model.distance)) miles"

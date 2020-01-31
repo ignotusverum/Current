@@ -23,7 +23,7 @@ public class BusinessesModuleContext: ModuleContextProtocol {
 }
 
 public enum BusinessesModuleEvents: EventProtocol {
-    case businessIdSelected(String)
+    case businessSelected(Business)
 }
 
 public class BusinessesModules: ModuleProtocol, EventsProducer {

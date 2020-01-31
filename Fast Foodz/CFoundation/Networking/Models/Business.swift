@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Business: BusinessProtocol, Decodable {
+public struct Business: BusinessProtocol, Decodable, Equatable {
     public let id: String
     public let alias: String
     public let name: String

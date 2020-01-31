@@ -8,12 +8,14 @@
 import BusinessDetailModule
 import MERLin
 import Foundation
+import CFoundation
 
 typealias BusinessDetailEvent = BusinessDetailsModuleEvents
 
 extension ModuleRoutingStep {
-    static func businessDetails() -> ModuleRoutingStep {
-        let context = BusinessDetailModuleContext(routingContext: "main")
+    static func businessDetails(_ details: Business) -> ModuleRoutingStep {
+        let context = BusinessDetailModuleContext(details: details,
+                                                  routingContext: "main")
         return ModuleRoutingStep(withMaker: context)
     }
 }

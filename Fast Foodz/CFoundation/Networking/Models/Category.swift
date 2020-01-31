@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Category: CategoryProtocol, Decodable {
+public struct Category: CategoryProtocol, Decodable, Equatable {
     public let alias: String
     public let title: String
     
