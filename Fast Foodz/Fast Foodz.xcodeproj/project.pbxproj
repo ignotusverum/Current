@@ -108,6 +108,13 @@
 		5AEEF18D23E3DBA000B21E0D /* BusinessesPlacesModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AEEF18B23E3DBA000B21E0D /* BusinessesPlacesModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AEEF19023E3DBA000B21E0D /* BusinessesPlacesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEEF18923E3DBA000B21E0D /* BusinessesPlacesModule.framework */; };
 		5AEEF19123E3DBA000B21E0D /* BusinessesPlacesModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEEF18923E3DBA000B21E0D /* BusinessesPlacesModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5AEEF19623E4548F00B21E0D /* BusinessesPlacesModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF19523E4548F00B21E0D /* BusinessesPlacesModule.swift */; };
+		5AEEF19C23E4550E00B21E0D /* BusinessesPlacesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF19B23E4550E00B21E0D /* BusinessesPlacesState.swift */; };
+		5AEEF19E23E4551700B21E0D /* BusinessesPlacesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF19D23E4551700B21E0D /* BusinessesPlacesActions.swift */; };
+		5AEEF1A023E4552400B21E0D /* BusinessesPlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF19F23E4552400B21E0D /* BusinessesPlacesViewModel.swift */; };
+		5AEEF1A423E455D300B21E0D /* BusinessPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF1A323E455D300B21E0D /* BusinessPin.swift */; };
+		5AEEF1A623E4567F00B21E0D /* BusinessesPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF1A523E4567F00B21E0D /* BusinessesPlacesModel.swift */; };
+		5AEEF1A823E4571400B21E0D /* BusinessesPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF1A723E4571400B21E0D /* BusinessesPlacesViewController.swift */; };
 		9716375B23DE511400888D1C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716375A23DE511400888D1C /* APIKey.swift */; };
 		9762A92323DE2C1D005C3A4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9762A92223DE2C1D005C3A4D /* AppDelegate.swift */; };
 		9762A92C23DE2C1F005C3A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9762A92B23DE2C1F005C3A4D /* Assets.xcassets */; };
@@ -197,6 +204,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5AEEF18823E3DBA000B21E0D;
 			remoteInfo = BusinessesPlacesModule;
+		};
+		5AEEF1A123E4556700B21E0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9762A91723DE2C1D005C3A4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AEEF01823E39B1500B21E0D;
+			remoteInfo = CFoundation;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -337,6 +351,13 @@
 		5AEEF18923E3DBA000B21E0D /* BusinessesPlacesModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BusinessesPlacesModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AEEF18B23E3DBA000B21E0D /* BusinessesPlacesModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessesPlacesModule.h; sourceTree = "<group>"; };
 		5AEEF18C23E3DBA000B21E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AEEF19523E4548F00B21E0D /* BusinessesPlacesModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesPlacesModule.swift; sourceTree = "<group>"; };
+		5AEEF19B23E4550E00B21E0D /* BusinessesPlacesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesPlacesState.swift; sourceTree = "<group>"; };
+		5AEEF19D23E4551700B21E0D /* BusinessesPlacesActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesPlacesActions.swift; sourceTree = "<group>"; };
+		5AEEF19F23E4552400B21E0D /* BusinessesPlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesPlacesViewModel.swift; sourceTree = "<group>"; };
+		5AEEF1A323E455D300B21E0D /* BusinessPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessPin.swift; sourceTree = "<group>"; };
+		5AEEF1A523E4567F00B21E0D /* BusinessesPlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesPlacesModel.swift; sourceTree = "<group>"; };
+		5AEEF1A723E4571400B21E0D /* BusinessesPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesPlacesViewController.swift; sourceTree = "<group>"; };
 		5C389B0C2C526B4252DA6503 /* Pods_Modules_CFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_CFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7AAC340B83174FBAC1590F /* Pods_Modules_BusinessesPlacesModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_BusinessesPlacesModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7202B312051B7C398B923318 /* Pods_Modules_TopTabBarContainerModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_TopTabBarContainerModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -844,9 +865,48 @@
 			isa = PBXGroup;
 			children = (
 				5AEEF18B23E3DBA000B21E0D /* BusinessesPlacesModule.h */,
+				5AEEF19523E4548F00B21E0D /* BusinessesPlacesModule.swift */,
+				5AEEF1A323E455D300B21E0D /* BusinessPin.swift */,
+				5AEEF19723E454D500B21E0D /* BusinessesPlaces */,
 				5AEEF18C23E3DBA000B21E0D /* Info.plist */,
 			);
 			path = BusinessesPlacesModule;
+			sourceTree = "<group>";
+		};
+		5AEEF19723E454D500B21E0D /* BusinessesPlaces */ = {
+			isa = PBXGroup;
+			children = (
+				5AEEF19A23E4550000B21E0D /* Model */,
+				5AEEF19923E454F800B21E0D /* ViewModel */,
+				5AEEF19823E454F400B21E0D /* View */,
+			);
+			path = BusinessesPlaces;
+			sourceTree = "<group>";
+		};
+		5AEEF19823E454F400B21E0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5AEEF1A723E4571400B21E0D /* BusinessesPlacesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5AEEF19923E454F800B21E0D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5AEEF19B23E4550E00B21E0D /* BusinessesPlacesState.swift */,
+				5AEEF19D23E4551700B21E0D /* BusinessesPlacesActions.swift */,
+				5AEEF19F23E4552400B21E0D /* BusinessesPlacesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5AEEF19A23E4550000B21E0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AEEF1A523E4567F00B21E0D /* BusinessesPlacesModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9762A91623DE2C1D005C3A4D = {
@@ -1117,6 +1177,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5AEEF1A223E4556700B21E0D /* PBXTargetDependency */,
 			);
 			name = BusinessesPlacesModule;
 			productName = BusinessesPlacesModule;
@@ -1187,6 +1248,7 @@
 					};
 					5AEEF18823E3DBA000B21E0D = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					9762A91E23DE2C1D005C3A4D = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -1564,6 +1626,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AEEF1A423E455D300B21E0D /* BusinessPin.swift in Sources */,
+				5AEEF19E23E4551700B21E0D /* BusinessesPlacesActions.swift in Sources */,
+				5AEEF19623E4548F00B21E0D /* BusinessesPlacesModule.swift in Sources */,
+				5AEEF1A623E4567F00B21E0D /* BusinessesPlacesModel.swift in Sources */,
+				5AEEF1A023E4552400B21E0D /* BusinessesPlacesViewModel.swift in Sources */,
+				5AEEF1A823E4571400B21E0D /* BusinessesPlacesViewController.swift in Sources */,
+				5AEEF19C23E4550E00B21E0D /* BusinessesPlacesState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1644,6 +1713,11 @@
 			isa = PBXTargetDependency;
 			target = 5AEEF18823E3DBA000B21E0D /* BusinessesPlacesModule */;
 			targetProxy = 5AEEF18E23E3DBA000B21E0D /* PBXContainerItemProxy */;
+		};
+		5AEEF1A223E4556700B21E0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AEEF01823E39B1500B21E0D /* CFoundation */;
+			targetProxy = 5AEEF1A123E4556700B21E0D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2061,6 +2135,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AEC6908B7FB83289B5161938 /* Pods-Modules-BusinessesPlacesModule.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -2079,6 +2154,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = vladz.BusinessesPlacesModule;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2090,6 +2166,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24EDF3E3419B81C105E33ECB /* Pods-Modules-BusinessesPlacesModule.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;

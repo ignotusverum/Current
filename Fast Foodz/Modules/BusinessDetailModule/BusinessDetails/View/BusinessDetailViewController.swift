@@ -93,15 +93,7 @@ class BusinessDetailViewController: UIViewController, UICollectionViewDelegateFl
     private func bindViewModel() {
         collectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
-        
-        collectionView.rx.itemSelected
-            .subscribe(onNext: { [weak self] indexPath in
-                guard let self = self else { return }
                 
-                print("cell selected")
-            })
-            .disposed(by: disposeBag)
-        
         let states = viewModel.transform(input: actions).publish()
         
         states.capture(case: BusinessDetailsState.details)
