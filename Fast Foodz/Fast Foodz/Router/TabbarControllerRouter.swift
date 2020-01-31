@@ -39,6 +39,7 @@ class TabBarControllerRouter: Router {
                                                                                                        presentationMode: .none))
         
         let containerController = UINavigationController(rootViewController: topTabBarViewController)
+        containerController.navigationBar.tintColor = .color(forPalette: .white)
         
         /// TODO: Add some kind of initial splash screen to follow this logic, could be A/B Tests
         AppDelegate.shared.window?.transitionToRootController(containerController)
