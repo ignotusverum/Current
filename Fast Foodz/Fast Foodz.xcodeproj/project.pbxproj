@@ -104,6 +104,10 @@
 		5AEEF17A23E3D9D100B21E0D /* TopTabBarContainerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF17923E3D9D100B21E0D /* TopTabBarContainerModule.swift */; };
 		5AEEF17C23E3D9E600B21E0D /* TopTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF17B23E3D9E600B21E0D /* TopTabBarController.swift */; };
 		5AEEF18123E3DAF100B21E0D /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF18023E3DAF100B21E0D /* CGSize.swift */; };
+		5AEEF18323E3DB3700B21E0D /* TopTabBarContainerStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF18223E3DB3700B21E0D /* TopTabBarContainerStep.swift */; };
+		5AEEF18D23E3DBA000B21E0D /* BusinessesPlacesModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AEEF18B23E3DBA000B21E0D /* BusinessesPlacesModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AEEF19023E3DBA000B21E0D /* BusinessesPlacesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEEF18923E3DBA000B21E0D /* BusinessesPlacesModule.framework */; };
+		5AEEF19123E3DBA000B21E0D /* BusinessesPlacesModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEEF18923E3DBA000B21E0D /* BusinessesPlacesModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9716375B23DE511400888D1C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716375A23DE511400888D1C /* APIKey.swift */; };
 		9762A92323DE2C1D005C3A4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9762A92223DE2C1D005C3A4D /* AppDelegate.swift */; };
 		9762A92C23DE2C1F005C3A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9762A92B23DE2C1F005C3A4D /* Assets.xcassets */; };
@@ -112,6 +116,7 @@
 		A42097CC34BCEBB118FA343E /* Pods_Modules_BusinessDetailModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7DACDE4238087B91DEF83E /* Pods_Modules_BusinessDetailModule.framework */; };
 		AEB00574CC5A08E084164633 /* Pods_Modules_TopTabBarContainerModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7202B312051B7C398B923318 /* Pods_Modules_TopTabBarContainerModule.framework */; };
 		CA670036B4AD94A3D0DE8EDE /* Pods_Fast_Foodz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F89032A2FA24DC1A0179356 /* Pods_Fast_Foodz.framework */; };
+		E1E7253B8CBDA1107E79A014 /* Pods_Modules_BusinessesPlacesModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7AAC340B83174FBAC1590F /* Pods_Modules_BusinessesPlacesModule.framework */; };
 		FA36F9D921E47BA4E60B84BD /* Pods_Modules_CFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C389B0C2C526B4252DA6503 /* Pods_Modules_CFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -186,6 +191,13 @@
 			remoteGlobalIDString = 5AEEF01823E39B1500B21E0D;
 			remoteInfo = CFoundation;
 		};
+		5AEEF18E23E3DBA000B21E0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9762A91723DE2C1D005C3A4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AEEF18823E3DBA000B21E0D;
+			remoteInfo = BusinessesPlacesModule;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -199,6 +211,7 @@
 				5AEEF02123E39B1500B21E0D /* CFoundation.framework in Embed Frameworks */,
 				5AEEF17523E3D9BA00B21E0D /* TopTabBarContainerModule.framework in Embed Frameworks */,
 				5AEEF04723E39C3800B21E0D /* CUIKit.framework in Embed Frameworks */,
+				5AEEF19123E3DBA000B21E0D /* BusinessesPlacesModule.framework in Embed Frameworks */,
 				5AEEF13C23E3C1AB00B21E0D /* BusinessDetailModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -210,6 +223,7 @@
 		1394EB5C7DD755A5A593389D /* Pods-Fast Foodz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fast Foodz.release.xcconfig"; path = "Target Support Files/Pods-Fast Foodz/Pods-Fast Foodz.release.xcconfig"; sourceTree = "<group>"; };
 		194D475E3324D17281E34E60 /* Pods-Modules-TopTabBarContainerModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-TopTabBarContainerModule.release.xcconfig"; path = "Target Support Files/Pods-Modules-TopTabBarContainerModule/Pods-Modules-TopTabBarContainerModule.release.xcconfig"; sourceTree = "<group>"; };
 		23DC072D999A75B980FAD201 /* Pods-Modules-CFoundation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-CFoundation.release.xcconfig"; path = "Target Support Files/Pods-Modules-CFoundation/Pods-Modules-CFoundation.release.xcconfig"; sourceTree = "<group>"; };
+		24EDF3E3419B81C105E33ECB /* Pods-Modules-BusinessesPlacesModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-BusinessesPlacesModule.release.xcconfig"; path = "Target Support Files/Pods-Modules-BusinessesPlacesModule/Pods-Modules-BusinessesPlacesModule.release.xcconfig"; sourceTree = "<group>"; };
 		25FD914B0DB9E35EAEF2A40E /* Pods-Modules-BusinessDetailModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-BusinessDetailModule.release.xcconfig"; path = "Target Support Files/Pods-Modules-BusinessDetailModule/Pods-Modules-BusinessDetailModule.release.xcconfig"; sourceTree = "<group>"; };
 		27E61F1AD5493889D66A0BAF /* Pods-Fast Foodz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fast Foodz.debug.xcconfig"; path = "Target Support Files/Pods-Fast Foodz/Pods-Fast Foodz.debug.xcconfig"; sourceTree = "<group>"; };
 		27EC555BDD5A3FFAC07D69DA /* Pods-Modules-BusinessesModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-BusinessesModule.release.xcconfig"; path = "Target Support Files/Pods-Modules-BusinessesModule/Pods-Modules-BusinessesModule.release.xcconfig"; sourceTree = "<group>"; };
@@ -319,7 +333,12 @@
 		5AEEF17923E3D9D100B21E0D /* TopTabBarContainerModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBarContainerModule.swift; sourceTree = "<group>"; };
 		5AEEF17B23E3D9E600B21E0D /* TopTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBarController.swift; sourceTree = "<group>"; };
 		5AEEF18023E3DAF100B21E0D /* CGSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
+		5AEEF18223E3DB3700B21E0D /* TopTabBarContainerStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabBarContainerStep.swift; sourceTree = "<group>"; };
+		5AEEF18923E3DBA000B21E0D /* BusinessesPlacesModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BusinessesPlacesModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AEEF18B23E3DBA000B21E0D /* BusinessesPlacesModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessesPlacesModule.h; sourceTree = "<group>"; };
+		5AEEF18C23E3DBA000B21E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C389B0C2C526B4252DA6503 /* Pods_Modules_CFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_CFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7AAC340B83174FBAC1590F /* Pods_Modules_BusinessesPlacesModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_BusinessesPlacesModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7202B312051B7C398B923318 /* Pods_Modules_TopTabBarContainerModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_TopTabBarContainerModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDB5C5022129D8204527F9D /* Pods-Modules-BusinessDetailModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-BusinessDetailModule.debug.xcconfig"; path = "Target Support Files/Pods-Modules-BusinessDetailModule/Pods-Modules-BusinessDetailModule.debug.xcconfig"; sourceTree = "<group>"; };
 		944BF087E0B2657082783FDC /* Pods-Modules-BusinessesModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-BusinessesModule.debug.xcconfig"; path = "Target Support Files/Pods-Modules-BusinessesModule/Pods-Modules-BusinessesModule.debug.xcconfig"; sourceTree = "<group>"; };
@@ -329,6 +348,7 @@
 		9762A92E23DE2C1F005C3A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9762A93023DE2C1F005C3A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9762A93623DE2D99005C3A4D /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AEC6908B7FB83289B5161938 /* Pods-Modules-BusinessesPlacesModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-BusinessesPlacesModule.debug.xcconfig"; path = "Target Support Files/Pods-Modules-BusinessesPlacesModule/Pods-Modules-BusinessesPlacesModule.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +405,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5AEEF18623E3DBA000B21E0D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E7253B8CBDA1107E79A014 /* Pods_Modules_BusinessesPlacesModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9762A91C23DE2C1D005C3A4D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,6 +420,7 @@
 				5AEEF0F323E3A5A900B21E0D /* BusinessesModule.framework in Frameworks */,
 				5AEEF04623E39C3800B21E0D /* CUIKit.framework in Frameworks */,
 				5AEEF17423E3D9BA00B21E0D /* TopTabBarContainerModule.framework in Frameworks */,
+				5AEEF19023E3DBA000B21E0D /* BusinessesPlacesModule.framework in Frameworks */,
 				5AEEF13B23E3C1AB00B21E0D /* BusinessDetailModule.framework in Frameworks */,
 				5AEEF02023E39B1500B21E0D /* CFoundation.framework in Frameworks */,
 				CA670036B4AD94A3D0DE8EDE /* Pods_Fast_Foodz.framework in Frameworks */,
@@ -409,6 +438,7 @@
 				2F896C2BC329B5CFAE831199 /* Pods_Modules_BusinessesModule.framework */,
 				2A7DACDE4238087B91DEF83E /* Pods_Modules_BusinessDetailModule.framework */,
 				7202B312051B7C398B923318 /* Pods_Modules_TopTabBarContainerModule.framework */,
+				5C7AAC340B83174FBAC1590F /* Pods_Modules_BusinessesPlacesModule.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -635,6 +665,7 @@
 		5AEEF0FA23E3A60600B21E0D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5AEEF18A23E3DBA000B21E0D /* BusinessesPlacesModule */,
 				5AEEF16E23E3D9BA00B21E0D /* TopTabBarContainerModule */,
 				5AEEF13523E3C1AB00B21E0D /* BusinessDetailModule */,
 				5AEEF0ED23E3A5A900B21E0D /* BusinessesModule */,
@@ -665,6 +696,7 @@
 			children = (
 				5AEEF10923E3A7FA00B21E0D /* BusinessesSetup.swift */,
 				5AEEF14423E3C26800B21E0D /* BusinessDetailSetup.swift */,
+				5AEEF18223E3DB3700B21E0D /* TopTabBarContainerStep.swift */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -808,6 +840,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		5AEEF18A23E3DBA000B21E0D /* BusinessesPlacesModule */ = {
+			isa = PBXGroup;
+			children = (
+				5AEEF18B23E3DBA000B21E0D /* BusinessesPlacesModule.h */,
+				5AEEF18C23E3DBA000B21E0D /* Info.plist */,
+			);
+			path = BusinessesPlacesModule;
+			sourceTree = "<group>";
+		};
 		9762A91623DE2C1D005C3A4D = {
 			isa = PBXGroup;
 			children = (
@@ -826,6 +867,7 @@
 				5AEEF0EC23E3A5A900B21E0D /* BusinessesModule.framework */,
 				5AEEF13423E3C1AB00B21E0D /* BusinessDetailModule.framework */,
 				5AEEF16D23E3D9BA00B21E0D /* TopTabBarContainerModule.framework */,
+				5AEEF18923E3DBA000B21E0D /* BusinessesPlacesModule.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -861,6 +903,8 @@
 				25FD914B0DB9E35EAEF2A40E /* Pods-Modules-BusinessDetailModule.release.xcconfig */,
 				39B1E1086516D8D98A9EE71A /* Pods-Modules-TopTabBarContainerModule.debug.xcconfig */,
 				194D475E3324D17281E34E60 /* Pods-Modules-TopTabBarContainerModule.release.xcconfig */,
+				AEC6908B7FB83289B5161938 /* Pods-Modules-BusinessesPlacesModule.debug.xcconfig */,
+				24EDF3E3419B81C105E33ECB /* Pods-Modules-BusinessesPlacesModule.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -913,6 +957,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AEEF17123E3D9BA00B21E0D /* TopTabBarContainerModule.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AEEF18423E3DBA000B21E0D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AEEF18D23E3DBA000B21E0D /* BusinessesPlacesModule.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1052,6 +1104,25 @@
 			productReference = 5AEEF16D23E3D9BA00B21E0D /* TopTabBarContainerModule.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		5AEEF18823E3DBA000B21E0D /* BusinessesPlacesModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AEEF19223E3DBA000B21E0D /* Build configuration list for PBXNativeTarget "BusinessesPlacesModule" */;
+			buildPhases = (
+				4AAEAB582EAF2A4B7B8719CC /* [CP] Check Pods Manifest.lock */,
+				5AEEF18423E3DBA000B21E0D /* Headers */,
+				5AEEF18523E3DBA000B21E0D /* Sources */,
+				5AEEF18623E3DBA000B21E0D /* Frameworks */,
+				5AEEF18723E3DBA000B21E0D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BusinessesPlacesModule;
+			productName = BusinessesPlacesModule;
+			productReference = 5AEEF18923E3DBA000B21E0D /* BusinessesPlacesModule.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		9762A91E23DE2C1D005C3A4D /* Fast Foodz */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9762A93323DE2C1F005C3A4D /* Build configuration list for PBXNativeTarget "Fast Foodz" */;
@@ -1072,6 +1143,7 @@
 				5AEEF0F223E3A5A900B21E0D /* PBXTargetDependency */,
 				5AEEF13A23E3C1AB00B21E0D /* PBXTargetDependency */,
 				5AEEF17323E3D9BA00B21E0D /* PBXTargetDependency */,
+				5AEEF18F23E3DBA000B21E0D /* PBXTargetDependency */,
 			);
 			name = "Fast Foodz";
 			productName = "Fast Foodz";
@@ -1113,6 +1185,9 @@
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1130;
 					};
+					5AEEF18823E3DBA000B21E0D = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					9762A91E23DE2C1D005C3A4D = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -1139,6 +1214,7 @@
 				5AEEF0EB23E3A5A900B21E0D /* BusinessesModule */,
 				5AEEF13323E3C1AB00B21E0D /* BusinessDetailModule */,
 				5AEEF16C23E3D9BA00B21E0D /* TopTabBarContainerModule */,
+				5AEEF18823E3DBA000B21E0D /* BusinessesPlacesModule */,
 			);
 		};
 /* End PBXProject section */
@@ -1198,6 +1274,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5AEEF18723E3DBA000B21E0D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9762A91D23DE2C1D005C3A4D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1248,6 +1331,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Modules-TopTabBarContainerModule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4AAEAB582EAF2A4B7B8719CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Modules-BusinessesPlacesModule-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1455,6 +1560,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5AEEF18523E3DBA000B21E0D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9762A91B23DE2C1D005C3A4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1463,6 +1575,7 @@
 				5AEEF11523E3A7FA00B21E0D /* GlobalTheme.swift in Sources */,
 				5AEEF11123E3A7FA00B21E0D /* MainRoutingListenerAggregator.swift in Sources */,
 				5AEEF11223E3A7FA00B21E0D /* AppDelegateRoutingEventsListener.swift in Sources */,
+				5AEEF18323E3DB3700B21E0D /* TopTabBarContainerStep.swift in Sources */,
 				9762A93723DE2D99005C3A4D /* Colors.swift in Sources */,
 				5AEEF11323E3A7FA00B21E0D /* BusinessesSetup.swift in Sources */,
 				5AEEF11023E3A7FA00B21E0D /* BusinessesRoutingListener.swift in Sources */,
@@ -1526,6 +1639,11 @@
 			isa = PBXTargetDependency;
 			target = 5AEEF01823E39B1500B21E0D /* CFoundation */;
 			targetProxy = 5AEEF17D23E3DA1A00B21E0D /* PBXContainerItemProxy */;
+		};
+		5AEEF18F23E3DBA000B21E0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AEEF18823E3DBA000B21E0D /* BusinessesPlacesModule */;
+			targetProxy = 5AEEF18E23E3DBA000B21E0D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1939,6 +2057,64 @@
 			};
 			name = Release;
 		};
+		5AEEF19323E3DBA000B21E0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEC6908B7FB83289B5161938 /* Pods-Modules-BusinessesPlacesModule.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Modules/BusinessesPlacesModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vladz.BusinessesPlacesModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5AEEF19423E3DBA000B21E0D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24EDF3E3419B81C105E33ECB /* Pods-Modules-BusinessesPlacesModule.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Modules/BusinessesPlacesModule/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vladz.BusinessesPlacesModule;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9762A93123DE2C1F005C3A4D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2157,6 +2333,15 @@
 			buildConfigurations = (
 				5AEEF17723E3D9BA00B21E0D /* Debug */,
 				5AEEF17823E3D9BA00B21E0D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AEEF19223E3DBA000B21E0D /* Build configuration list for PBXNativeTarget "BusinessesPlacesModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AEEF19323E3DBA000B21E0D /* Debug */,
+				5AEEF19423E3DBA000B21E0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
