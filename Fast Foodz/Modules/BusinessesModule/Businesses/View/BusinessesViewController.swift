@@ -57,7 +57,7 @@ class BusinessesViewController: UIViewController, UICollectionViewDelegateFlowLa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Fast Food Places"
+        title = "List"
         
         tabBarController?.tabBar.isHidden = true
         

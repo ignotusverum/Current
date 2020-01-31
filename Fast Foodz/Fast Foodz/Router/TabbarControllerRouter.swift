@@ -25,20 +25,26 @@ class TabBarControllerRouter: Router {
     var disposeBag: DisposeBag = DisposeBag()
     
     func rootViewController(forLaunchOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?) -> UIViewController? {
-        let tabbarController = UITabBarController()
-        guard let viewControllerFactory = viewControllersFactory else { return tabbarController }
+        topViewController = UIViewController()
+        guard let viewControllerFactory = viewControllersFactory else { return UIViewController() }
         
-        let matchesViewController = viewControllerFactory.viewController(for: PresentableRoutingStep(withStep: .businesses(),
-                                                                                                     presentationMode: .none))
+        let viewControllers = [ModuleRoutingStep.businessesPlaces(),
+                               .businesses()]
+            .map { PresentableRoutingStep(withStep: $0,
+                                          presentationMode: .none) }
+            .compactMap { self.route(to: $0) }
         
-        let matchesNavigationController = UINavigationController(rootViewController: matchesViewController)
-        tabbarController.viewControllers = [matchesNavigationController]
+        let topTabBarContainer = ModuleRoutingStep.topTabBarContainer(viewControllers: viewControllers)
+        let topTabBarViewController = viewControllerFactory.viewController(for: PresentableRoutingStep(withStep: topTabBarContainer,
+                                                                                                       presentationMode: .none))
+        
+        let containerController = UINavigationController(rootViewController: topTabBarViewController)
         
         /// TODO: Add some kind of initial splash screen to follow this logic, could be A/B Tests
-        AppDelegate.shared.window?.transitionToRootController(tabbarController)
-        topViewController = tabbarController
+        AppDelegate.shared.window?.transitionToRootController(containerController)
+        topViewController = containerController
         
-        return tabbarController
+        return containerController
     }
     
     func showLoadingView() {}

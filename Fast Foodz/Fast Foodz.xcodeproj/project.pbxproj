@@ -115,6 +115,7 @@
 		5AEEF1A423E455D300B21E0D /* BusinessPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF1A323E455D300B21E0D /* BusinessPin.swift */; };
 		5AEEF1A623E4567F00B21E0D /* BusinessesPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF1A523E4567F00B21E0D /* BusinessesPlacesModel.swift */; };
 		5AEEF1A823E4571400B21E0D /* BusinessesPlacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF1A723E4571400B21E0D /* BusinessesPlacesViewController.swift */; };
+		5AEEF1AA23E4649500B21E0D /* BusinessesPlacesStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF1A923E4649500B21E0D /* BusinessesPlacesStep.swift */; };
 		9716375B23DE511400888D1C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716375A23DE511400888D1C /* APIKey.swift */; };
 		9762A92323DE2C1D005C3A4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9762A92223DE2C1D005C3A4D /* AppDelegate.swift */; };
 		9762A92C23DE2C1F005C3A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9762A92B23DE2C1F005C3A4D /* Assets.xcassets */; };
@@ -358,6 +359,7 @@
 		5AEEF1A323E455D300B21E0D /* BusinessPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessPin.swift; sourceTree = "<group>"; };
 		5AEEF1A523E4567F00B21E0D /* BusinessesPlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesPlacesModel.swift; sourceTree = "<group>"; };
 		5AEEF1A723E4571400B21E0D /* BusinessesPlacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesPlacesViewController.swift; sourceTree = "<group>"; };
+		5AEEF1A923E4649500B21E0D /* BusinessesPlacesStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesPlacesStep.swift; sourceTree = "<group>"; };
 		5C389B0C2C526B4252DA6503 /* Pods_Modules_CFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_CFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7AAC340B83174FBAC1590F /* Pods_Modules_BusinessesPlacesModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_BusinessesPlacesModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7202B312051B7C398B923318 /* Pods_Modules_TopTabBarContainerModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_TopTabBarContainerModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -717,6 +719,7 @@
 			children = (
 				5AEEF10923E3A7FA00B21E0D /* BusinessesSetup.swift */,
 				5AEEF14423E3C26800B21E0D /* BusinessDetailSetup.swift */,
+				5AEEF1A923E4649500B21E0D /* BusinessesPlacesStep.swift */,
 				5AEEF18223E3DB3700B21E0D /* TopTabBarContainerStep.swift */,
 			);
 			path = Routes;
@@ -1647,6 +1650,7 @@
 				5AEEF18323E3DB3700B21E0D /* TopTabBarContainerStep.swift in Sources */,
 				9762A93723DE2D99005C3A4D /* Colors.swift in Sources */,
 				5AEEF11323E3A7FA00B21E0D /* BusinessesSetup.swift in Sources */,
+				5AEEF1AA23E4649500B21E0D /* BusinessesPlacesStep.swift in Sources */,
 				5AEEF11023E3A7FA00B21E0D /* BusinessesRoutingListener.swift in Sources */,
 				9716375B23DE511400888D1C /* APIKey.swift in Sources */,
 				5AEEF11623E3A7FA00B21E0D /* MatchesAdapter+Config.swift in Sources */,

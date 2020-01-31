@@ -16,7 +16,7 @@ private extension ThemeColorPalette {
         case .grey100: return .color(fromHex: "#ebecf2")    
         case .grey300: return .color(fromHex: "#9c9b9e")
         case .black: return .color(fromHex: "#50555d")
-        case .primary: return .color(fromHex: "#4b7bd9")
+        case .primary: return .color(fromHex: "#7a00ff")
         case .error: return .color(fromHex: "#EF0A00")
         case .success: return .color(fromHex: "#45e588")
         }

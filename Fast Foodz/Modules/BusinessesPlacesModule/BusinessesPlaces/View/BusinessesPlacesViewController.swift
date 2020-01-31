@@ -41,7 +41,10 @@ class BusinessesPlacesViewController: UIViewController {
         
         layout()
         
+        title = "Map"
+        
         mapView.delegate = self
+        bindViewModel()
     }
     
     private func layout() {
@@ -91,7 +94,7 @@ extension BusinessesPlacesViewController: MKMapViewDelegate {
     }
     
     private func zoomToFitMapAnnotations() {
-        guard annotationsArray.isEmpty else { return }
+        guard !annotationsArray.isEmpty else { return }
         
         var topLeftCoordinate = CLLocationCoordinate2DMake(-90, 180)
         var bottomRightCoordinate = CLLocationCoordinate2DMake(90, -180)
@@ -111,7 +114,7 @@ extension BusinessesPlacesViewController: MKMapViewDelegate {
         region.span.longitudeDelta = abs(bottomRightCoordinate.longitude - topLeftCoordinate.longitude) * 2.0
         
         region = mapView.regionThatFits(region)
-        mapView.setRegion(region, animated: false)
+        mapView.setRegion(region, animated: true)
     }
     
     private func adjustMapRegion(forCoordinate coordinate: CLLocationCoordinate2D) {
