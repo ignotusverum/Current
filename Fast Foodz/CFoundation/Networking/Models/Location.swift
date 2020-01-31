@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Location: LocationProtocol, Decodable {
+public struct Location: LocationProtocol, Decodable, Equatable {
     public let address1: String
     public let address2: String?
     public let address3: String?

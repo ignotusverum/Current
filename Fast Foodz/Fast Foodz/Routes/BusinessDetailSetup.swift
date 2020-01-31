@@ -9,7 +9,7 @@ import BusinessDetailModule
 import MERLin
 import Foundation
 
-typealias BusinessDetailEvent = BusinessDetailModuleEvents
+typealias BusinessDetailEvent = BusinessDetailsModuleEvents
 
 extension ModuleRoutingStep {
     static func businessDetails() -> ModuleRoutingStep {

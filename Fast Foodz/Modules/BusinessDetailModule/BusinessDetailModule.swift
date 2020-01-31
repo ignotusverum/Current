@@ -22,13 +22,13 @@ public class BusinessDetailModuleContext: ModuleContextProtocol {
     }
 }
 
-public enum BusinessDetailModuleEvents: EventProtocol {
+public enum BusinessDetailsModuleEvents: EventProtocol {
     case callBusiness(String)
 }
 
 public class BusinessDetailModules: ModuleProtocol, EventsProducer {
-    public var events: Observable<BusinessDetailModuleEvents> { return _events.asObservable() }
-    private var _events = PublishSubject<BusinessDetailModuleEvents>()
+    public var events: Observable<BusinessDetailsModuleEvents> { return _events.asObservable() }
+    private var _events = PublishSubject<BusinessDetailsModuleEvents>()
     
     public var context: BusinessDetailModuleContext
     
