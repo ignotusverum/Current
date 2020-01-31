@@ -18,4 +18,18 @@ public enum ThemeColorPalette: CaseIterable {
     // Alerts
     case error
     case success
+    
+    // Current
+    case competitionPurple
+    case londonSky
+    case deepIndigo
+    case bluCepheus
+    case mexicoBlue
+    case osloBlue
+    case rubystoneRed
+    case superPink
+    case lilacGrey
+    case powderBlue
+    case viola
+    case pickleGreen
 }

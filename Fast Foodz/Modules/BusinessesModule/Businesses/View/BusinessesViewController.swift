@@ -31,6 +31,11 @@ class BusinessesViewController: UIViewController, UICollectionViewDelegateFlowLa
                                             layout.minimumLineSpacing = 0
                                             layout.minimumInteritemSpacing = 0
                                             
+                                            layout.sectionInset = UIEdgeInsets(top: 100,
+                                                                               left: 0,
+                                                                               bottom: 0,
+                                                                               right: 0)
+                                            
                                             $0.collectionViewLayout = layout
                                             $0.registerNib(BusinessCell.self)
                                             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -117,7 +122,6 @@ class BusinessesViewController: UIViewController, UICollectionViewDelegateFlowLa
             .asDriverIgnoreError()
             .drive(onNext: { [weak self] (error, _) in
                 guard let self = self else { return }
-                
                 let alert = UIAlertController(title: "Whoops",
                                               message: "Something went wrong, please try again.",
                                               preferredStyle: .alert)
@@ -147,25 +151,6 @@ class BusinessesViewController: UIViewController, UICollectionViewDelegateFlowLa
                 self?.activityIndicator.stopAnimating()
             }).disposed(by: disposeBag)
         
-        /// TODO: Paging
-        Observable.combineLatest(
-            collectionView.rx.contentOffset.map { $0.y },
-            collectionView.rx.observe(CGSize.self, "contentSize")
-                .compactMap { $0?.height }
-        ).map { [weak self] (y, h) in
-            guard let self = self,
-                (h - self.collectionView.bounds.height) >= (y - 100) else {
-                    return false
-            }
-            return true
-        }.distinctUntilChanged()
-            .takeTrue()
-            .asDriverIgnoreError()
-            .drive(onNext: { _ in
-                print("[DEBUG TODO] Implement paging by cursors")
-            })
-            .disposed(by: disposeBag)
-        
         states.connect()
             .disposed(by: disposeBag)
     }
@@ -180,7 +165,7 @@ class BusinessesViewController: UIViewController, UICollectionViewDelegateFlowLa
     }
     
     func applyTheme() {
-        collectionView.backgroundColor = .color(forPalette: .grey100)
+        collectionView.backgroundColor = .color(forPalette: .white)
         collectionView.reloadData()
     }
     
@@ -204,16 +189,8 @@ extension BusinessesViewController {
         
         let cell: BusinessCell = collectionView.dequeueReusableCell(for: indexPath)
         
-        if let imageUrl = row.imageUrl {
-            cell.imageView.downloadImage(with: imageUrl,
-                                         completionHandler: { result, _ in
-                                            switch result {
-                                            case let .success(image):
-                                                cell.imageView.image = image
-                                                
-                                            case .failure:
-                                                cell.imageView.image = UIImage()
-                                            }})
+        if let rowType = row.type {
+            cell.imageView.image = UIImage(named: rowType.rawValue)
         }
         
         cell.titleLabel.text = row.title

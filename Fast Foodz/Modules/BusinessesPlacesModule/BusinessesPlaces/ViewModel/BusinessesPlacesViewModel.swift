@@ -54,8 +54,8 @@ class BusinessesPlacesViewModel: BusinessesPlacesViewModelProtocol {
                         .map(BusinessesPlacesActions.model)
         })
             .sendSideEffects({ state in
-                input.capture(case: BusinessesPlacesUIAction.businessSelected)
-                    .map(BusinessesPlacesModuleEvents.businessSelected)
+                input.capture(case: BusinessesPlacesUIAction.annotationPressed)
+                    .map(BusinessesPlacesModuleEvents.annotationPressed)
             }, to: events.asObserver())
     }
 }

@@ -9,7 +9,7 @@ import MERLin
 import CFoundation
 
 enum BusinessesPlacesUIAction: EventProtocol {
-    case businessSelected(Business)
+    case annotationPressed(_ title: String)
 }
 
 enum BusinessesPlacesModelAction: EventProtocol {

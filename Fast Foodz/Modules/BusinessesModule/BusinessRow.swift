@@ -8,28 +8,18 @@
 import CFoundation
 import RxDataSources
 
-enum BusinessType: String, Equatable {
-    case mexican
-    case pizza
-    case chinese
-    case burger
-    case undefined
-}
-
 struct BusinessRow: Equatable {
-    let type: BusinessType
     let title: String
     let subtitle: String
     
-    let imageUrl: URL?
-    
     let model: Business
+    let type: BusinessType?
     
     init(model: Business) {
         self.model = model
-        type = .mexican
-        imageUrl = model.imageURL
         title = model.name
+        
+        type = model.type
         
         let distance = "\(Int(model.distance)) miles"
         if let price = model.price {

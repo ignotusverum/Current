@@ -81,7 +81,7 @@ extension BusinessesPlacesViewController: MKMapViewDelegate {
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2DMake(CLLocationDegrees(pin.coordinates.latitude),
                                                                CLLocationDegrees(pin.coordinates.longitude))
-            annotation.title = String(format: "%i", pin.title)
+            annotation.title = pin.title
             annotationsArray.append(annotation)
             mapView.addAnnotation(annotation)
         }
@@ -115,6 +115,26 @@ extension BusinessesPlacesViewController: MKMapViewDelegate {
         
         region = mapView.regionThatFits(region)
         mapView.setRegion(region, animated: true)
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation { return nil }
+
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "pin")
+
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+            annotationView?.canShowCallout = true
+            annotationView?.image = UIImage(named: "pin")
+        } else {
+            annotationView?.annotation = annotation
+        }
+
+        return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        actions.onNext(.annotationPressed(""))
     }
     
     private func adjustMapRegion(forCoordinate coordinate: CLLocationCoordinate2D) {

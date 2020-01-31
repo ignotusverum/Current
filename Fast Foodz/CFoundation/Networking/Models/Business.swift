@@ -8,6 +8,13 @@
 
 import Foundation
 
+public enum BusinessType: String, Equatable {
+    case mexican
+    case pizza
+    case chinese
+    case burgers
+}
+
 public struct Business: BusinessProtocol, Decodable, Equatable {
     public let id: String
     public let alias: String
@@ -26,6 +33,10 @@ public struct Business: BusinessProtocol, Decodable, Equatable {
     public let coordinates: Coordinates
     
     public var imageURL: URL? { URL(string: imagePath)}
+    
+    public var type: BusinessType? {
+        categories.compactMap { BusinessType(rawValue: $0.alias) }.first
+    }
     
     enum CodingKeys: String, CodingKey {
         case id

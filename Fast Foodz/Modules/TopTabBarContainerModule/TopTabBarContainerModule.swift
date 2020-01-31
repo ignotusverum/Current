@@ -28,21 +28,18 @@ class ContainerTopTabBarController: TopTabBarController, Themed {
     }
     
     func applyTheme() {
-        selectedItemBackgroundColor = .color(forPalette: .white)
-        unselectedItemBackgroundColor = .color(forPalette: .grey100)
+        selectedItemBackgroundColor = .color(forPalette: .competitionPurple)
+        unselectedItemBackgroundColor = .color(forPalette: .londonSky)
         selectedItemAttributes = [
             .font: UIFont.font(forStyle: .title(attribute: .regular)),
-            .foregroundColor: UIColor.color(forPalette: .black)
+            .foregroundColor: UIColor.color(forPalette: .white)
         ]
         
         unselectedItemAttributes = [
             .font: UIFont.font(forStyle: .title(attribute: .regular)),
-            .foregroundColor: UIColor.color(forPalette: .grey300)
+            .foregroundColor: UIColor.color(forPalette: .deepIndigo)
         ]
         hideBarIfOneOrNone = true
-        topTabBar.setBorder(.bottom,
-                            withColor: .color(forPalette: .grey100),
-                            andThickness: 1)
     }
 }
 

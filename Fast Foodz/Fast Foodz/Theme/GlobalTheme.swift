@@ -19,6 +19,18 @@ private extension ThemeColorPalette {
         case .primary: return .color(fromHex: "#7a00ff")
         case .error: return .color(fromHex: "#EF0A00")
         case .success: return .color(fromHex: "#45e588")
+        case .competitionPurple: return .color(fromHex: "6d00ff")
+        case .londonSky: return .color(fromHex: "eef0f1")
+        case .deepIndigo: return .color(fromHex: "270450")
+        case .bluCepheus: return .color(fromHex: "00d2ff")
+        case .mexicoBlue: return .color(fromHex: "13a8f1")
+        case .osloBlue: return .color(fromHex: "2e7aff")
+        case .rubystoneRed: return .color(fromHex: "c31eba")
+        case .superPink: return .color(fromHex: "ff4281")
+        case .lilacGrey: return .color(fromHex: "7e7687")
+        case .powderBlue: return .color(fromHex: "b5c7de")
+        case .viola: return .color(fromHex: "9213d5")
+        case .pickleGreen: return .color(fromHex: "28c760")
         }
     }
 }

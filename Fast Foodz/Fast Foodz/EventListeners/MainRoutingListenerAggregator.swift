@@ -15,7 +15,8 @@ class MainRoutingListenerAggregator: ModuleEventsListenersAggregator {
     
     init(withRouter router: Router) {
         moduleListeners = [
-            BusinessesRoutingListener(router)
+            BusinessesRoutingListener(router),
+            BusinessesPlacesRoutingListener(router)
         ]
     }
 }

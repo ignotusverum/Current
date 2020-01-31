@@ -33,6 +33,7 @@ open class TopTabBarController: UIViewController {
     
     public var unselectedItemBackgroundColor: UIColor = .clear {
         didSet {
+            topTabBar.backgroundColor = unselectedItemBackgroundColor
             guard let index = selectedIndex else { return }
             itemsStackView.arrangedSubviews.enumerated()
                 .filter { $0.offset != index }
@@ -107,9 +108,12 @@ open class TopTabBarController: UIViewController {
         view.backgroundColor = .white
         edgesForExtendedLayout = []
         
+        topTabBar.layer.cornerRadius = 10
+        topTabBar.clipsToBounds = true
+        
         let currentSubViews = topTabBar.subviews
         
-        [(topTabBar, view), (childViewContainer, view), (itemsStackView, topTabBar)]
+        [(childViewContainer, view), (topTabBar, view), (itemsStackView, topTabBar)]
             .forEach { (view, superView) in
                 view.translatesAutoresizingMaskIntoConstraints = false
                 view.backgroundColor = .clear
@@ -123,17 +127,20 @@ open class TopTabBarController: UIViewController {
             .constraint(equalTo: view.topAnchor, constant: 0)
         
         NSLayoutConstraint.activate([
-            topTabBar.topAnchor.constraint(equalTo: view.topAnchor),
-            topTabBar.leftAnchor.constraint(equalTo: view.leftAnchor),
-            topTabBar.rightAnchor.constraint(equalTo: view.rightAnchor),
+            topTabBar.topAnchor.constraint(equalTo: view.topAnchor,
+                                           constant: 32),
+            topTabBar.leftAnchor.constraint(equalTo: view.leftAnchor,
+                                            constant: 80),
+            topTabBar.rightAnchor.constraint(equalTo: view.rightAnchor,
+                                             constant: -80),
             bottomConstraint,
             
-            childViewContainer.topAnchor.constraint(equalTo: topTabBar.bottomAnchor),
+            childViewContainer.topAnchor.constraint(equalTo: view.topAnchor),
             childViewContainer.leftAnchor.constraint(equalTo: view.leftAnchor),
             childViewContainer.rightAnchor.constraint(equalTo: view.rightAnchor),
             childViewContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            itemsStackView.heightAnchor.constraint(equalToConstant: 50),
+            itemsStackView.heightAnchor.constraint(equalToConstant: 40),
             itemsStackView.leftAnchor.constraint(equalTo: topTabBar.leftAnchor),
             itemsStackView.rightAnchor.constraint(equalTo: topTabBar.rightAnchor),
             itemsStackView.bottomAnchor.constraint(equalTo: topTabBar.bottomAnchor)
@@ -221,6 +228,9 @@ open class TopTabBarController: UIViewController {
             button.addTarget(self, action: #selector(didSelect(_:)), for: .touchUpInside)
             button.backgroundColor = self.unselectedItemBackgroundColor
             
+            button.layer.cornerRadius = 10
+            button.clipsToBounds = true
+            
             itemsStackView.addArrangedSubview(button)
             
             $0.loadViewIfNeeded()
@@ -242,7 +252,7 @@ open class TopTabBarController: UIViewController {
         
         viewControllers.count < 2 && hideBarIfOneOrNone ?
             (bottomConstraint.constant = 0) :
-            (bottomConstraint.constant = 50 + view.safeAreaInsets.top)
+            (bottomConstraint.constant = 72 + view.safeAreaInsets.top)
     }
     
     @objc
