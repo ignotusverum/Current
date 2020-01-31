@@ -13,9 +13,13 @@ public class MapCell: UICollectionViewCell, MKMapViewDelegate, CLLocationManager
     @IBOutlet public weak var mapView: MKMapView?
     let locationManager = CLLocationManager()
     
-    public override func didMoveToSuperview() {
-        super.didMoveToSuperview()
-                
+    public var coordinates: CLLocationCoordinate2D = CLLocationCoordinate2D() {
+        didSet {
+            setupLocationServices()
+        }
+    }
+    
+    private func setupLocationServices() {
         let authorizationStatus = CLLocationManager.authorizationStatus()
 
         if authorizationStatus == CLAuthorizationStatus.notDetermined {
@@ -51,7 +55,7 @@ public class MapCell: UICollectionViewCell, MKMapViewDelegate, CLLocationManager
     func processLocation(for latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), addressDictionary: nil))
-        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 37.783333, longitude: -122.416667), addressDictionary: nil))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude), addressDictionary: nil))
         request.requestsAlternateRoutes = true
         request.transportType = .automobile
 

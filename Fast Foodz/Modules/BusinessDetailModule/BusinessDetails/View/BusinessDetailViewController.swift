@@ -48,6 +48,7 @@ class BusinessDetailViewController: UIViewController, UICollectionViewDelegateFl
                                             
                                             $0.collectionViewLayout = layout
                                             $0.registerNib(MapCell.self)
+                                            $0.registerNib(ButtonCell.self)
                                             $0.registerNib(ImageTitleCell.self)
                                             $0.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -146,7 +147,8 @@ class BusinessDetailViewController: UIViewController, UICollectionViewDelegateFl
         
         let rows: [BusinessDetailCellType] = [.header(title: model.title,
                                                       imageURL: model.imageURL),
-                                              .map(coordinates: model.coordinates)]
+                                              .map(coordinates: model.coordinates),
+                                              .numberButton(number: model.phoneNumber)]
         
         return AnimatableSectionModel(model: "",
                                       items: rows)
@@ -178,12 +180,20 @@ extension BusinessDetailViewController {
             
             return cell
             
-        case .map(_):
+        case .map(let coordinates):
             let cell: MapCell = collectionView.dequeueReusableCell(for: indexPath)
+            
+            cell.coordinates = CLLocationCoordinate2D(latitude: CLLocationDegrees(coordinates.latitude),
+                                                      longitude: CLLocationDegrees(coordinates.longitude))
+            
             return cell
             
         case .numberButton(_):
-            return UICollectionViewCell()
+            let cell: ButtonCell = collectionView.dequeueReusableCell(for: indexPath)
+            
+            cell.button?.setTitle("Call Business", for: .normal)
+            
+            return cell
         }
     }
 }

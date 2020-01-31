@@ -30,5 +30,6 @@ abstract_target 'Modules' do
   target 'CFoundation'
   target 'BusinessesModule'
   target 'BusinessDetailModule'
+  target 'TopTabBarContainerModule'
 end
 
