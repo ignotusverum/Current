@@ -37,12 +37,12 @@ public class BusinessesPlacesModules: ModuleProtocol, EventsProducer {
     }
     
     public func unmanagedRootViewController() -> UIViewController {
-//        let model = BusinessesPlacesModel()
-//        let viewModel = BusinessesPlacesViewModel(model: model,
-//                                         events: _events)
-//
-//        let view = BusinessesPlacesViewController(with: viewModel)
-//
-        return UIViewController()
+        let model = BusinessesPlacesModel()
+        let viewModel = BusinessesPlacesViewModel(model: model,
+                                         events: _events)
+
+        let view = BusinessesPlacesViewController(with: viewModel)
+
+        return view
     }
 }

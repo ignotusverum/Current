@@ -865,8 +865,8 @@
 			isa = PBXGroup;
 			children = (
 				5AEEF18B23E3DBA000B21E0D /* BusinessesPlacesModule.h */,
-				5AEEF19523E4548F00B21E0D /* BusinessesPlacesModule.swift */,
 				5AEEF1A323E455D300B21E0D /* BusinessPin.swift */,
+				5AEEF19523E4548F00B21E0D /* BusinessesPlacesModule.swift */,
 				5AEEF19723E454D500B21E0D /* BusinessesPlaces */,
 				5AEEF18C23E3DBA000B21E0D /* Info.plist */,
 			);

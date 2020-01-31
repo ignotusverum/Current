@@ -11,7 +11,11 @@ import CFoundation
 import MapKit
 import CoreLocation
 
+import MERLin
+
 class BusinessesPlacesViewController: UIViewController {
+    let disposeBag = DisposeBag()
+    
     var mapView: MKMapView = MKMapView() <~ {
         $0.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -20,9 +24,9 @@ class BusinessesPlacesViewController: UIViewController {
     var viewModel: BusinessesPlacesViewModel
     var annotationsArray: [MKPointAnnotation] = []
     
-    init(datasource: [BusinessPin],
-         viewModel: BusinessesPlacesViewModel) {
-        self.datasource = datasource
+    private let actions = PublishSubject<BusinessesPlacesUIAction>()
+    
+    init(with viewModel: BusinessesPlacesViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil,
                    bundle: nil)
@@ -38,7 +42,6 @@ class BusinessesPlacesViewController: UIViewController {
         layout()
         
         mapView.delegate = self
-        addAnnotationsToMap()
     }
     
     private func layout() {
@@ -49,6 +52,21 @@ class BusinessesPlacesViewController: UIViewController {
             mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+    
+    private func bindViewModel() {
+        let states = viewModel.transform(input: actions).publish()
+        
+        states.capture(case: BusinessesPlacesState.pages)
+            .asDriverIgnoreError()
+            .drive(onNext: { [weak self] rows in
+                self?.datasource = rows
+                self?.addAnnotationsToMap()
+            })
+            .disposed(by: disposeBag)
+    
+        states.connect()
+            .disposed(by: disposeBag)
     }
 }
 
