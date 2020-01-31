@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Coordinates: CoordinatesProtocol, Decodable {
+public struct Coordinates: CoordinatesProtocol, Decodable, Equatable {
     public let latitude: Float
     public let longitude: Float
     

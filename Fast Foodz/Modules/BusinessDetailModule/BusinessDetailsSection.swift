@@ -10,13 +10,13 @@ import CFoundation
 struct BusinessDetailsSection: Equatable {
     let imageURL: URL?
     var title: String
-    var location: Location
+    var coordinates: Coordinates
     var phoneNumber: String
     
     init(model: Business) {
         imageURL = model.imageURL
         title = model.name
-        location = model.location
+        coordinates = model.coordinates
         phoneNumber = model.phone
     }
 }

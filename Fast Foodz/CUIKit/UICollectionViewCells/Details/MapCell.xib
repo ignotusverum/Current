@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bhD-hp-Zao" customClass="MapCell" customModule="CUIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="530"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gDG-Fu-h9R">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="530"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MgW-pu-A8L">
+                        <rect key="frame" x="20" y="10" width="380" height="510"/>
+                        <connections>
+                            <outlet property="delegate" destination="bhD-hp-Zao" id="Xag-om-IU0"/>
+                        </connections>
+                    </mapView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MgW-pu-A8L" firstAttribute="centerY" secondItem="gDG-Fu-h9R" secondAttribute="centerY" id="60c-iN-sFY"/>
+                    <constraint firstItem="MgW-pu-A8L" firstAttribute="trailing" secondItem="gDG-Fu-h9R" secondAttribute="trailingMargin" id="7XU-kO-hGH"/>
+                    <constraint firstItem="MgW-pu-A8L" firstAttribute="top" secondItem="gDG-Fu-h9R" secondAttribute="top" constant="10" id="BBb-aq-SDt"/>
+                    <constraint firstItem="MgW-pu-A8L" firstAttribute="leading" secondItem="gDG-Fu-h9R" secondAttribute="leadingMargin" id="ts4-Ax-HYy"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="420" height="530"/>
+            <connections>
+                <outlet property="mapView" destination="MgW-pu-A8L" id="bSO-ba-fWa"/>
+            </connections>
+            <point key="canvasLocation" x="-7.2463768115942031" y="-206.91964285714286"/>
+        </collectionViewCell>
+    </objects>
+</document>

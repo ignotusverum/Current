@@ -89,6 +89,11 @@
 		5AEEF14C23E3C5D900B21E0D /* BusinessDetailsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF14B23E3C5D900B21E0D /* BusinessDetailsState.swift */; };
 		5AEEF14E23E3C5E000B21E0D /* BusinessDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF14D23E3C5E000B21E0D /* BusinessDetailsViewModel.swift */; };
 		5AEEF15023E3C64000B21E0D /* BusinessDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF14F23E3C64000B21E0D /* BusinessDetailsSection.swift */; };
+		5AEEF15223E3C81A00B21E0D /* BusinessDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF15123E3C81900B21E0D /* BusinessDetailViewController.swift */; };
+		5AEEF15523E3C9FC00B21E0D /* ImageTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF15423E3C9FC00B21E0D /* ImageTitleCell.swift */; };
+		5AEEF15723E3CA0500B21E0D /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF15623E3CA0500B21E0D /* MapCell.swift */; };
+		5AEEF15C23E3CA2F00B21E0D /* ImageTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AEEF15B23E3CA2F00B21E0D /* ImageTitleCell.xib */; };
+		5AEEF15E23E3CA3400B21E0D /* MapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AEEF15D23E3CA3400B21E0D /* MapCell.xib */; };
 		9716375B23DE511400888D1C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716375A23DE511400888D1C /* APIKey.swift */; };
 		9762A92323DE2C1D005C3A4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9762A92223DE2C1D005C3A4D /* AppDelegate.swift */; };
 		9762A92C23DE2C1F005C3A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9762A92B23DE2C1F005C3A4D /* Assets.xcassets */; };
@@ -271,6 +276,11 @@
 		5AEEF14B23E3C5D900B21E0D /* BusinessDetailsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailsState.swift; sourceTree = "<group>"; };
 		5AEEF14D23E3C5E000B21E0D /* BusinessDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailsViewModel.swift; sourceTree = "<group>"; };
 		5AEEF14F23E3C64000B21E0D /* BusinessDetailsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailsSection.swift; sourceTree = "<group>"; };
+		5AEEF15123E3C81900B21E0D /* BusinessDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailViewController.swift; sourceTree = "<group>"; };
+		5AEEF15423E3C9FC00B21E0D /* ImageTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleCell.swift; sourceTree = "<group>"; };
+		5AEEF15623E3CA0500B21E0D /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
+		5AEEF15B23E3CA2F00B21E0D /* ImageTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTitleCell.xib; sourceTree = "<group>"; };
+		5AEEF15D23E3CA3400B21E0D /* MapCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapCell.xib; sourceTree = "<group>"; };
 		5C389B0C2C526B4252DA6503 /* Pods_Modules_CFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_CFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDB5C5022129D8204527F9D /* Pods-Modules-BusinessDetailModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-BusinessDetailModule.debug.xcconfig"; path = "Target Support Files/Pods-Modules-BusinessDetailModule/Pods-Modules-BusinessDetailModule.debug.xcconfig"; sourceTree = "<group>"; };
 		944BF087E0B2657082783FDC /* Pods-Modules-BusinessesModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-BusinessesModule.debug.xcconfig"; path = "Target Support Files/Pods-Modules-BusinessesModule/Pods-Modules-BusinessesModule.debug.xcconfig"; sourceTree = "<group>"; };
@@ -430,6 +440,7 @@
 		5AEEF04E23E39C4E00B21E0D /* UICollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				5AEEF15323E3C9EA00B21E0D /* Details */,
 				5AEEF04F23E39C4E00B21E0D /* TitleCell.swift */,
 				5AEEF05023E39C4E00B21E0D /* CardCell */,
 				5AEEF05323E39C4E00B21E0D /* Protocols */,
@@ -699,8 +710,20 @@
 		5AEEF14823E3C5B600B21E0D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5AEEF15123E3C81900B21E0D /* BusinessDetailViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5AEEF15323E3C9EA00B21E0D /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				5AEEF15423E3C9FC00B21E0D /* ImageTitleCell.swift */,
+				5AEEF15B23E3CA2F00B21E0D /* ImageTitleCell.xib */,
+				5AEEF15623E3CA0500B21E0D /* MapCell.swift */,
+				5AEEF15D23E3CA3400B21E0D /* MapCell.xib */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		9762A91623DE2C1D005C3A4D = {
@@ -1014,6 +1037,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AEEF12C23E3BF1A00B21E0D /* Assets.xcassets in Resources */,
+				5AEEF15C23E3CA2F00B21E0D /* ImageTitleCell.xib in Resources */,
+				5AEEF15E23E3CA3400B21E0D /* MapCell.xib in Resources */,
 				5AEEF12A23E3B56700B21E0D /* BusinessCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1205,8 +1230,10 @@
 			files = (
 				5AEEF12823E3B53A00B21E0D /* BusinessCell.swift in Sources */,
 				5AEEF05823E39C4E00B21E0D /* TitleCell.swift in Sources */,
+				5AEEF15723E3CA0500B21E0D /* MapCell.swift in Sources */,
 				5AEEF05623E39C4E00B21E0D /* ScrollBarView.swift in Sources */,
 				5AEEF05723E39C4E00B21E0D /* SelectionListView.swift in Sources */,
+				5AEEF15523E3C9FC00B21E0D /* ImageTitleCell.swift in Sources */,
 				5AEEF12E23E3BF8B00B21E0D /* UIView+Border.swift in Sources */,
 				5AEEF05B23E39C4E00B21E0D /* TitleViewProtocol.swift in Sources */,
 				5AEEF05C23E39C4E00B21E0D /* ImageDetailsCellProtocol.swift in Sources */,
@@ -1260,6 +1287,7 @@
 				5AEEF14A23E3C5D100B21E0D /* BusinessDetailsActions.swift in Sources */,
 				5AEEF14123E3C1BA00B21E0D /* BusinessDetailModule.swift in Sources */,
 				5AEEF14C23E3C5D900B21E0D /* BusinessDetailsState.swift in Sources */,
+				5AEEF15223E3C81A00B21E0D /* BusinessDetailViewController.swift in Sources */,
 				5AEEF14E23E3C5E000B21E0D /* BusinessDetailsViewModel.swift in Sources */,
 				5AEEF15023E3C64000B21E0D /* BusinessDetailsSection.swift in Sources */,
 			);
