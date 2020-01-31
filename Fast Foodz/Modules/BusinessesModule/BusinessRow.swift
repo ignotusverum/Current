@@ -22,11 +22,13 @@ struct BusinessRow: Equatable {
     let title: String
     let distance: String
     
+    let imageUrl: URL?
+    
     init(model: Business) {
         type = .mexican
-        price = "model.price"
+        imageUrl = model.imageURL
+        price = model.price ?? "-"
         title = model.name
-        distance = ""
-//        distance = "\(model.distance) miles"
+        distance = "\(Int(model.distance)) miles"
     }
 }

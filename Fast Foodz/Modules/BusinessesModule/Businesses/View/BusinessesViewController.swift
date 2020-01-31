@@ -213,7 +213,21 @@ extension BusinessesViewController {
         
         let cell: BusinessCell = collectionView.dequeueReusableCell(for: indexPath)
         
+        if let imageUrl = row.imageUrl {
+            cell.imageView.downloadImage(with: imageUrl,
+                                         completionHandler: { result, _ in
+                                            switch result {
+                                            case let .success(image):
+                                                cell.imageView.image = image
+                                                
+                                            case .failure:
+                                                cell.imageView.image = UIImage()
+                                            }})
+        }
+        
         cell.titleLabel.text = row.title
+        cell.subtitleLabel.text = row.price
+        cell.bottomSubtitleLabel.text = row.distance
         cell.applyTheme()
         
         return cell

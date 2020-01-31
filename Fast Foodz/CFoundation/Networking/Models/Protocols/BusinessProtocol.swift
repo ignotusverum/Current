@@ -12,7 +12,7 @@ public protocol BusinessProtocol {
     var id: String { get }
     var alias: String { get }
     var name: String { get }
-    var imageUrl: String { get }
+    var imagePath: String { get }
     var isClosed: Bool { get }
     var url: String { get }
     var rating: Float { get }

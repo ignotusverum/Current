@@ -12,7 +12,7 @@ public struct Business: BusinessProtocol, Decodable {
     public let id: String
     public let alias: String
     public let name: String
-    public let imageUrl: String
+    public let imagePath: String
     public let isClosed: Bool
     public let url: String
     public let rating: Float
@@ -25,11 +25,13 @@ public struct Business: BusinessProtocol, Decodable {
     public let location: Location
     public let coordinates: Coordinates
     
+    public var imageURL: URL? { URL(string: imagePath)}
+    
     enum CodingKeys: String, CodingKey {
         case id
         case alias
         case name
-        case imageUrl = "image_url"
+        case imagePath = "image_url"
         case isClosed = "is_closed"
         case url
         case rating
