@@ -9,9 +9,12 @@ import UIKit
 import MapKit
 import CoreLocation
 
+/// TODO: Move delegate to map configurator
 public class MapCell: UICollectionViewCell, MKMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet public weak var mapView: MKMapView?
     let locationManager = CLLocationManager()
+    
+    public var renderer: MKPolylineRenderer?
     
     public var coordinates: CLLocationCoordinate2D = CLLocationCoordinate2D() {
         didSet {
@@ -23,16 +26,12 @@ public class MapCell: UICollectionViewCell, MKMapViewDelegate, CLLocationManager
         let authorizationStatus = CLLocationManager.authorizationStatus()
 
         if authorizationStatus == CLAuthorizationStatus.notDetermined {
+            locationManager.requestAlwaysAuthorization()
             locationManager.requestWhenInUseAuthorization()
         } else {
             locationManager.startUpdatingLocation()
         }
         
-        self.locationManager.requestAlwaysAuthorization()
-
-        // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -41,14 +40,12 @@ public class MapCell: UICollectionViewCell, MKMapViewDelegate, CLLocationManager
     }
     
     public func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
-        renderer.strokeColor = UIColor.blue
-        return renderer
+        renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        return renderer!
     }
     
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
         processLocation(for: locValue.latitude, longitude: locValue.longitude)
     }
     

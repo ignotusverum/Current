@@ -13,16 +13,25 @@ public extension BusinessCell {
     func applyTheme(usingTheme theme: ThemeProtocol = ThemeContainer.defaultTheme) {
         backgroundColor = theme.color(forColorPalette: .white)
         
-        subtitleLabel.applyLabelStyle(.title(attribute: .regular),
-                                      usingTheme: theme)
+        subtitleLabel.applyLabelStyle(.title(attribute: .regular))
         
         titleLabel.applyLabelStyle(.subtitle(attribute: .bold),
-                                   usingTheme: theme,
                                    customizing: { (label, _) in
                                     label.textColor = theme.color(forColorPalette: .deepIndigo)
         })
         
-        imageView.tintColor = theme.color(forColorPalette: .deepIndigo)
+        let gradientColor = [ThemeColorPalette.bluCepheus,
+                             .mexicoBlue,
+                             .osloBlue,
+                             .competitionPurple,
+                             .viola,
+                             .rubystoneRed,
+                             .superPink]
+            .map{ theme.color(forColorPalette: $0) }
+            .map { $0.cgColor }
+        
+        /// Heavy task for cells
+        imageView.setTintWith(gradients: gradientColor)
         chevroneImageView.tintColor = theme.color(forColorPalette: .deepIndigo)
         
         setBorder(.bottom,

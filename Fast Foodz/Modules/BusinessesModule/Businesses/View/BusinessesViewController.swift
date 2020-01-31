@@ -193,7 +193,6 @@ extension BusinessesViewController {
             cell.imageView.image = UIImage(named: rowType.rawValue)
         }
         
-        
         cell.titleLabel.text = row.title
         
         cell.applyTheme()

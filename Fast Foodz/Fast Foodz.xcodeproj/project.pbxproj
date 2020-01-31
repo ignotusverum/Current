@@ -94,10 +94,7 @@
 		5AEEF15723E3CA0500B21E0D /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF15623E3CA0500B21E0D /* MapCell.swift */; };
 		5AEEF15C23E3CA2F00B21E0D /* ImageTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AEEF15B23E3CA2F00B21E0D /* ImageTitleCell.xib */; };
 		5AEEF15E23E3CA3400B21E0D /* MapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AEEF15D23E3CA3400B21E0D /* MapCell.xib */; };
-		5AEEF16123E3D70300B21E0D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF16023E3D70300B21E0D /* Button.swift */; };
-		5AEEF16323E3D71700B21E0D /* ButtonStyleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF16223E3D71700B21E0D /* ButtonStyleProtocol.swift */; };
 		5AEEF16523E3D73D00B21E0D /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF16423E3D73D00B21E0D /* ButtonCell.swift */; };
-		5AEEF16723E3D74400B21E0D /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AEEF16623E3D74400B21E0D /* ButtonCell.xib */; };
 		5AEEF17123E3D9BA00B21E0D /* TopTabBarContainerModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AEEF16F23E3D9BA00B21E0D /* TopTabBarContainerModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AEEF17423E3D9BA00B21E0D /* TopTabBarContainerModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEEF16D23E3D9BA00B21E0D /* TopTabBarContainerModule.framework */; };
 		5AEEF17523E3D9BA00B21E0D /* TopTabBarContainerModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEEF16D23E3D9BA00B21E0D /* TopTabBarContainerModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -119,6 +116,11 @@
 		5AEEF1AC23E4768400B21E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AEEF1AB23E4768400B21E0D /* Assets.xcassets */; };
 		5AEEF1AE23E47E8100B21E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AEEF1AD23E47E8100B21E0D /* Assets.xcassets */; };
 		5AEEF1B023E482A700B21E0D /* BusinessesPlacesRoutingListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF1AF23E482A700B21E0D /* BusinessesPlacesRoutingListener.swift */; };
+		5AEEF1B223E493DA00B21E0D /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF1B123E493DA00B21E0D /* UIImage.swift */; };
+		5AEEF1B423E4979400B21E0D /* ImageTitleCell+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF1B323E4979400B21E0D /* ImageTitleCell+Theme.swift */; };
+		5AEEF1B623E497E400B21E0D /* MapCell+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF1B523E497E400B21E0D /* MapCell+Theme.swift */; };
+		5AEEF1BA23E49ABE00B21E0D /* ButtonCell+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF1B923E49ABE00B21E0D /* ButtonCell+Theme.swift */; };
+		5AEEF1BC23E4A2D200B21E0D /* BusinessDetailRoutingListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF1BB23E4A2D200B21E0D /* BusinessDetailRoutingListener.swift */; };
 		9762A92323DE2C1D005C3A4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9762A92223DE2C1D005C3A4D /* AppDelegate.swift */; };
 		9762A92C23DE2C1F005C3A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9762A92B23DE2C1F005C3A4D /* Assets.xcassets */; };
 		9762A92F23DE2C1F005C3A4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9762A92D23DE2C1F005C3A4D /* LaunchScreen.storyboard */; };
@@ -339,10 +341,7 @@
 		5AEEF15623E3CA0500B21E0D /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
 		5AEEF15B23E3CA2F00B21E0D /* ImageTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTitleCell.xib; sourceTree = "<group>"; };
 		5AEEF15D23E3CA3400B21E0D /* MapCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapCell.xib; sourceTree = "<group>"; };
-		5AEEF16023E3D70300B21E0D /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
-		5AEEF16223E3D71700B21E0D /* ButtonStyleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyleProtocol.swift; sourceTree = "<group>"; };
 		5AEEF16423E3D73D00B21E0D /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
-		5AEEF16623E3D74400B21E0D /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		5AEEF16D23E3D9BA00B21E0D /* TopTabBarContainerModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TopTabBarContainerModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AEEF16F23E3D9BA00B21E0D /* TopTabBarContainerModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopTabBarContainerModule.h; sourceTree = "<group>"; };
 		5AEEF17023E3D9BA00B21E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -364,6 +363,11 @@
 		5AEEF1AB23E4768400B21E0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AEEF1AD23E47E8100B21E0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AEEF1AF23E482A700B21E0D /* BusinessesPlacesRoutingListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesPlacesRoutingListener.swift; sourceTree = "<group>"; };
+		5AEEF1B123E493DA00B21E0D /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		5AEEF1B323E4979400B21E0D /* ImageTitleCell+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageTitleCell+Theme.swift"; sourceTree = "<group>"; };
+		5AEEF1B523E497E400B21E0D /* MapCell+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapCell+Theme.swift"; sourceTree = "<group>"; };
+		5AEEF1B923E49ABE00B21E0D /* ButtonCell+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonCell+Theme.swift"; sourceTree = "<group>"; };
+		5AEEF1BB23E4A2D200B21E0D /* BusinessDetailRoutingListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDetailRoutingListener.swift; sourceTree = "<group>"; };
 		5C389B0C2C526B4252DA6503 /* Pods_Modules_CFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_CFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7AAC340B83174FBAC1590F /* Pods_Modules_BusinessesPlacesModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_BusinessesPlacesModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7202B312051B7C398B923318 /* Pods_Modules_TopTabBarContainerModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_TopTabBarContainerModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -490,6 +494,7 @@
 				5AEEF02C23E39C1400B21E0D /* ScrollBarView+Rx.swift */,
 				5AEEF02D23E39C1400B21E0D /* Rx */,
 				5AEEF02F23E39C1400B21E0D /* Functional */,
+				5AEEF1B123E493DA00B21E0D /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -498,6 +503,9 @@
 			isa = PBXGroup;
 			children = (
 				5AEEF02823E39C1400B21E0D /* BusinessCell+Theme.swift */,
+				5AEEF1B323E4979400B21E0D /* ImageTitleCell+Theme.swift */,
+				5AEEF1B523E497E400B21E0D /* MapCell+Theme.swift */,
+				5AEEF1B923E49ABE00B21E0D /* ButtonCell+Theme.swift */,
 			);
 			path = ThemeStyles;
 			sourceTree = "<group>";
@@ -523,7 +531,6 @@
 			isa = PBXGroup;
 			children = (
 				5AEEF17F23E3DAE100B21E0D /* Extensions */,
-				5AEEF15F23E3D6FA00B21E0D /* Buttons */,
 				5AEEF04E23E39C4E00B21E0D /* UICollectionViewCells */,
 				5AEEF04B23E39C4E00B21E0D /* UIView */,
 				5AEEF04123E39C3800B21E0D /* CUIKit.h */,
@@ -712,6 +719,7 @@
 		5AEEF10423E3A7FA00B21E0D /* MainRoutingListeners */ = {
 			isa = PBXGroup;
 			children = (
+				5AEEF1BB23E4A2D200B21E0D /* BusinessDetailRoutingListener.swift */,
 				5AEEF10523E3A7FA00B21E0D /* BusinessesRoutingListener.swift */,
 				5AEEF1AF23E482A700B21E0D /* BusinessesPlacesRoutingListener.swift */,
 			);
@@ -836,18 +844,8 @@
 				5AEEF15623E3CA0500B21E0D /* MapCell.swift */,
 				5AEEF15D23E3CA3400B21E0D /* MapCell.xib */,
 				5AEEF16423E3D73D00B21E0D /* ButtonCell.swift */,
-				5AEEF16623E3D74400B21E0D /* ButtonCell.xib */,
 			);
 			path = Details;
-			sourceTree = "<group>";
-		};
-		5AEEF15F23E3D6FA00B21E0D /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				5AEEF16023E3D70300B21E0D /* Button.swift */,
-				5AEEF16223E3D71700B21E0D /* ButtonStyleProtocol.swift */,
-			);
-			path = Buttons;
 			sourceTree = "<group>";
 		};
 		5AEEF16E23E3D9BA00B21E0D /* TopTabBarContainerModule */ = {
@@ -1301,7 +1299,6 @@
 			files = (
 				5AEEF12C23E3BF1A00B21E0D /* Assets.xcassets in Resources */,
 				5AEEF15C23E3CA2F00B21E0D /* ImageTitleCell.xib in Resources */,
-				5AEEF16723E3D74400B21E0D /* ButtonCell.xib in Resources */,
 				5AEEF15E23E3CA3400B21E0D /* MapCell.xib in Resources */,
 				5AEEF12A23E3B56700B21E0D /* BusinessCell.xib in Resources */,
 			);
@@ -1519,12 +1516,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AEEF1B423E4979400B21E0D /* ImageTitleCell+Theme.swift in Sources */,
+				5AEEF1BA23E49ABE00B21E0D /* ButtonCell+Theme.swift in Sources */,
 				5AEEF0A223E3A2E600B21E0D /* LocationProtocol.swift in Sources */,
 				5AEEF08223E39CC200B21E0D /* Request.swift in Sources */,
 				5AEEF03923E39C1400B21E0D /* weakify.swift in Sources */,
 				5AEEF03723E39C1400B21E0D /* ObservableType.swift in Sources */,
 				5AEEF07423E39CC200B21E0D /* APIManager.swift in Sources */,
 				5AEEF07323E39CC200B21E0D /* AppError.swift in Sources */,
+				5AEEF1B623E497E400B21E0D /* MapCell+Theme.swift in Sources */,
+				5AEEF1B223E493DA00B21E0D /* UIImage.swift in Sources */,
 				5AEEF03823E39C1400B21E0D /* ConfigureOperator.swift in Sources */,
 				5AEEF03423E39C1400B21E0D /* UICollectionView.swift in Sources */,
 				5AEEF07D23E39CC200B21E0D /* BusinessAdapterAdapter.swift in Sources */,
@@ -1556,10 +1557,8 @@
 				5AEEF17C23E3D9E600B21E0D /* TopTabBarController.swift in Sources */,
 				5AEEF05823E39C4E00B21E0D /* TitleCell.swift in Sources */,
 				5AEEF15723E3CA0500B21E0D /* MapCell.swift in Sources */,
-				5AEEF16323E3D71700B21E0D /* ButtonStyleProtocol.swift in Sources */,
 				5AEEF05623E39C4E00B21E0D /* ScrollBarView.swift in Sources */,
 				5AEEF05723E39C4E00B21E0D /* SelectionListView.swift in Sources */,
-				5AEEF16123E3D70300B21E0D /* Button.swift in Sources */,
 				5AEEF15523E3C9FC00B21E0D /* ImageTitleCell.swift in Sources */,
 				5AEEF12E23E3BF8B00B21E0D /* UIView+Border.swift in Sources */,
 				5AEEF18123E3DAF100B21E0D /* CGSize.swift in Sources */,
@@ -1657,6 +1656,7 @@
 				5AEEF11323E3A7FA00B21E0D /* BusinessesSetup.swift in Sources */,
 				5AEEF1AA23E4649500B21E0D /* BusinessesPlacesStep.swift in Sources */,
 				5AEEF11023E3A7FA00B21E0D /* BusinessesRoutingListener.swift in Sources */,
+				5AEEF1BC23E4A2D200B21E0D /* BusinessDetailRoutingListener.swift in Sources */,
 				5AEEF11623E3A7FA00B21E0D /* MatchesAdapter+Config.swift in Sources */,
 				9762A92323DE2C1D005C3A4D /* AppDelegate.swift in Sources */,
 				5AEEF11423E3A7FA00B21E0D /* TabbarControllerRouter.swift in Sources */,

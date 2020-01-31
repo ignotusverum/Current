@@ -42,13 +42,13 @@ class BusinessDetailViewController: UIViewController, UICollectionViewDelegateFl
     let collectionView = UICollectionView(frame: .zero,
                                           collectionViewLayout: UICollectionViewFlowLayout()) <~ {
                                             let layout = UICollectionViewFlowLayout()
-
+                                            
                                             layout.minimumLineSpacing = 0
                                             layout.minimumInteritemSpacing = 0
                                             
                                             $0.collectionViewLayout = layout
                                             $0.registerNib(MapCell.self)
-                                            $0.registerNib(ButtonCell.self)
+                                            $0.register(ButtonCell.self)
                                             $0.registerNib(ImageTitleCell.self)
                                             $0.translatesAutoresizingMaskIntoConstraints = false
     }
@@ -89,11 +89,11 @@ class BusinessDetailViewController: UIViewController, UICollectionViewDelegateFl
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
- 
+    
     private func bindViewModel() {
         collectionView.rx.setDelegate(self)
             .disposed(by: disposeBag)
-                
+        
         let states = viewModel.transform(input: actions).publish()
         
         states.capture(case: BusinessDetailsState.details)
@@ -101,6 +101,18 @@ class BusinessDetailViewController: UIViewController, UICollectionViewDelegateFl
             .map { [self.createAnimatableSection($0)] }
             .drive(collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+        
+        collectionView.rx.itemSelected
+            .subscribe(onNext: { [weak self] indexPath in
+                guard let self = self else { return }
+                let row = self.dataSource[indexPath]
+                switch row {
+                case .numberButton(let number): self.actions.onNext(.callNumber(number))
+                default: print("[DEBUG] - handle custom calls")
+                }
+            })
+            .disposed(by: disposeBag)
+        
         
         states.connect()
             .disposed(by: disposeBag)
@@ -116,7 +128,7 @@ class BusinessDetailViewController: UIViewController, UICollectionViewDelegateFl
     }
     
     func applyTheme() {
-        collectionView.backgroundColor = .color(forPalette: .grey100)
+        collectionView.backgroundColor = .color(forPalette: .white)
         collectionView.reloadData()
     }
     
@@ -127,9 +139,9 @@ class BusinessDetailViewController: UIViewController, UICollectionViewDelegateFl
         
         var size: CGSize
         switch model {
-        case .header(_): size = CGSize(width: collectionView.frame.width, height: 230)
-        case .map(_): size = CGSize(width: collectionView.frame.width, height: 340)
-        case .numberButton(_): size = CGSize(width: collectionView.frame.width, height: 100)
+        case .header(_): size = CGSize(width: collectionView.frame.width, height: collectionView.frame.height / 3.4)
+        case .map(_): size = CGSize(width: collectionView.frame.width, height: collectionView.frame.height / 2.2)
+        case .numberButton(_): size = CGSize(width: collectionView.frame.width, height: 70)
         }
         
         return size
@@ -137,10 +149,11 @@ class BusinessDetailViewController: UIViewController, UICollectionViewDelegateFl
     
     private func createAnimatableSection(_ model: BusinessDetailsSection)-> AnimatableSectionModel<String, BusinessDetailCellType> {
         
-        let rows: [BusinessDetailCellType] = [.header(title: model.title,
+        var rows: [BusinessDetailCellType] = [.header(title: model.title,
                                                       imageURL: model.imageURL),
-                                              .map(coordinates: model.coordinates),
-                                              .numberButton(number: model.phoneNumber)]
+                                              .map(coordinates: model.coordinates)]
+        
+        model.phoneNumber.isEmpty ? () : rows.append(.numberButton(number: model.phoneNumber))
         
         return AnimatableSectionModel(model: "",
                                       items: rows)
@@ -158,7 +171,7 @@ extension BusinessDetailViewController {
             
             if let imageURL = imageURL {
                 cell.imageView?.downloadImage(with: imageURL,
-                                             completionHandler: { result, _ in
+                                              completionHandler: { result, _ in
                                                 switch result {
                                                 case let .success(image):
                                                     cell.imageView?.image = image
@@ -180,10 +193,17 @@ extension BusinessDetailViewController {
             
             return cell
             
-        case .numberButton(_):
+        case .numberButton(let number):
             let cell: ButtonCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.button.setTitle("Call Business", for: .normal)
             
-            cell.button?.setTitle("Call Business", for: .normal)
+            cell.button.rx.tap
+                .subscribe(onNext: { [weak self] _ in
+                    self?.actions.onNext(.callNumber(number))
+                })
+                .disposed(by: disposeBag)
+            
+            cell.applyTheme()
             
             return cell
         }
