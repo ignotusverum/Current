@@ -27,5 +27,7 @@ abstract_target 'Modules' do
   common
   
   target 'CFoundation'
+  
+  target 'BusinessesModule'
 end
 
