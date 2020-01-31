@@ -9,7 +9,7 @@
 import CUIKit
 import ThemeManager
 
-public extension CardCell {
+public extension BusinessCell {
     func applyTheme(usingTheme theme: ThemeProtocol = ThemeContainer.defaultTheme) {
         detailsView.backgroundColor = theme.color(forColorPalette: .white)
         
@@ -25,8 +25,5 @@ public extension CardCell {
         
         layer.cornerRadius = 6
         layer.masksToBounds = true
-        
-        isActiveIndicatorView.layer.cornerRadius = isActiveIndicatorView.frame.width / 2
-        isActiveIndicatorView.layer.masksToBounds = true
     }
 }

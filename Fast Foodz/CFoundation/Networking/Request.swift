@@ -27,14 +27,17 @@ public struct RequestConfig {
     public var path: String?
     public var parameters: Parameters?
     public var queryItems: [URLQueryItem]?
+    public var customHeaders: [String: String]?
     
     public init(method: HTTPMethod,
                 path: String? = nil,
                 parameters: Parameters? = nil,
-                queryItems: [URLQueryItem]? = nil) {
+                queryItems: [URLQueryItem]? = nil,
+                customHeaders: HTTPHeaders? = nil) {
         self.method = method
         self.path = path
         self.parameters = parameters
         self.queryItems = queryItems
+        self.customHeaders = customHeaders
     }
 }

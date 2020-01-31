@@ -16,7 +16,7 @@ public protocol BusinessProtocol {
     var isClosed: Bool { get }
     var url: String { get }
     var rating: Float { get }
-    var price: String { get }
+    var price: String? { get }
     var phone: String { get }
     var displayPhone: String { get }
     var distance: Float { get }

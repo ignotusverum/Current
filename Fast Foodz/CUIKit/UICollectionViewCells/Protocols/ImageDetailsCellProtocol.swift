@@ -12,8 +12,6 @@ import UIKit
 public protocol ImageDetailsCellProtocol where Self: UICollectionViewCell {
     var imageView: UIImageView! { get set }
     
-    var isActiveIndicatorView: UIView! { get set }
-    
     var detailsView: UIView! { get set }
     var titleLabel: UILabel! { get set }
     var subtitleLabel: UILabel! { get set }

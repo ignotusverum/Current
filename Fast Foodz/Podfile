@@ -25,9 +25,9 @@ end
 
 abstract_target 'Modules' do
   common
+  imageLoading
   
   target 'CFoundation'
-  
   target 'BusinessesModule'
 end
 

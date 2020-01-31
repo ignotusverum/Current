@@ -11,11 +11,14 @@ import RxSwift
 public struct AdapterConfig {
     public var base: String
     public var name: String
+    public var headers: HTTPHeaders
     
     public init(base: String,
-                name: String) {
+                name: String,
+                headers: HTTPHeaders) {
         self.base = base
         self.name = name
+        self.headers = headers 
     }
 }
 

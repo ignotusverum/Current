@@ -11,6 +11,6 @@ public protocol NetworkingConfigurable {
 }
 
 public extension MainAPIConfigurable {
-    static var baseURL: String { "techblog-static.s3.amazonaws.com" }
+    static var baseURL: String { "api.yelp.com" }
 }
 

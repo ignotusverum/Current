@@ -10,10 +10,11 @@ import Foundation
 
 public protocol LocationProtocol {
     var address1: String { get }
-    var address2: String { get }
+    var address2: String? { get }
+    var address3: String? { get }
     var city: String { get }
     var zipCode: String { get }
     var country: String { get }
     var state: String { get }
-    var displayAddresses: [String] { get }
+    var displayAddress: [String] { get }
 }

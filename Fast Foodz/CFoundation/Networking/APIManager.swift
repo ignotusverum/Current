@@ -29,7 +29,8 @@ final public class APIManager {
 
         let request = prepareRequest(method: config.method,
                                      url: url,
-                                     parameters: config.parameters)
+                                     parameters: config.parameters,
+                                     headers: config.customHeaders ?? [:])
 
         return session.rx
             .apiData(request: request)
@@ -38,9 +39,14 @@ final public class APIManager {
 
     private func prepareRequest(method: HTTPMethod,
                                 url: URL,
-                                parameters: Parameters? = nil) -> URLRequest {
+                                parameters: Parameters? = nil,
+                                headers: HTTPHeaders) -> URLRequest {
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
+        
+        for pair in headers {
+            request.setValue(pair.value, forHTTPHeaderField: pair.key)
+        }
         
         if let parameters = parameters {
             request.httpBody = try? JSONSerialization.data(withJSONObject: parameters,

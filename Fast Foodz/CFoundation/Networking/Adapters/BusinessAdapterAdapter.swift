@@ -55,7 +55,8 @@ private extension BusinessAdapter {
                                                                value: "distance"),
                                                   URLQueryItem(name: "categories",
                                                                value: "pizza,mexican,chinese,burgers")
-                ])
+                    ],
+                                     customHeaders: adapter.settings.headers)
             }
         }
     }

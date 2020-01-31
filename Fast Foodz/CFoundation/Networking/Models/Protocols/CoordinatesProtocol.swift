@@ -9,6 +9,6 @@
 import Foundation
 
 public protocol CoordinatesProtocol {
-    var latitude: String { get }
-    var longitude: String { get }
+    var latitude: Float { get }
+    var longitude: Float { get }
 }

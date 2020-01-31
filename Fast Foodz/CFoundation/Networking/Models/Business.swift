@@ -16,7 +16,7 @@ public struct Business: BusinessProtocol, Decodable {
     public let isClosed: Bool
     public let url: String
     public let rating: Float
-    public let price: String
+    public let price: String?
     public let phone: String
     public let displayPhone: String
     public let distance: Float

@@ -21,6 +21,7 @@ public extension UICollectionView {
     }
     
     func registerNib<T: UICollectionViewCell>(_ cellClass: T.Type) {
+        print("\(T.self) - \(cellClass.self)")
         let nib = UINib(nibName: "\(T.self)",
                         bundle: Bundle(for: T.self))
         register(nib,

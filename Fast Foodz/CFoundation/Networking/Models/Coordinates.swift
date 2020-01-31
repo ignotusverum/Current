@@ -9,8 +9,8 @@
 import Foundation
 
 public struct Coordinates: CoordinatesProtocol, Decodable {
-    public let latitude: String
-    public let longitude: String
+    public let latitude: Float
+    public let longitude: Float
     
     enum CodingKeys: String, CodingKey {
         case latitude

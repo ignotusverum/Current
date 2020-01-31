@@ -11,7 +11,7 @@
 		5AEEF01D23E39B1500B21E0D /* CFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AEEF01B23E39B1500B21E0D /* CFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AEEF02023E39B1500B21E0D /* CFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEEF01923E39B1500B21E0D /* CFoundation.framework */; };
 		5AEEF02123E39B1500B21E0D /* CFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEEF01923E39B1500B21E0D /* CFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5AEEF03223E39C1400B21E0D /* Card+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF02823E39C1400B21E0D /* Card+Theme.swift */; };
+		5AEEF03223E39C1400B21E0D /* BusinessCell+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF02823E39C1400B21E0D /* BusinessCell+Theme.swift */; };
 		5AEEF03323E39C1400B21E0D /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF02923E39C1400B21E0D /* Decodable.swift */; };
 		5AEEF03423E39C1400B21E0D /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF02A23E39C1400B21E0D /* UICollectionView.swift */; };
 		5AEEF03523E39C1400B21E0D /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF02B23E39C1400B21E0D /* String.swift */; };
@@ -25,8 +25,6 @@
 		5AEEF05623E39C4E00B21E0D /* ScrollBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF04C23E39C4E00B21E0D /* ScrollBarView.swift */; };
 		5AEEF05723E39C4E00B21E0D /* SelectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF04D23E39C4E00B21E0D /* SelectionListView.swift */; };
 		5AEEF05823E39C4E00B21E0D /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF04F23E39C4E00B21E0D /* TitleCell.swift */; };
-		5AEEF05923E39C4E00B21E0D /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF05123E39C4E00B21E0D /* CardCell.swift */; };
-		5AEEF05A23E39C4E00B21E0D /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AEEF05223E39C4E00B21E0D /* CardCell.xib */; };
 		5AEEF05B23E39C4E00B21E0D /* TitleViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF05423E39C4E00B21E0D /* TitleViewProtocol.swift */; };
 		5AEEF05C23E39C4E00B21E0D /* ImageDetailsCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF05523E39C4E00B21E0D /* ImageDetailsCellProtocol.swift */; };
 		5AEEF07323E39CC200B21E0D /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF05E23E39CC200B21E0D /* AppError.swift */; };
@@ -72,6 +70,14 @@
 		5AEEF11423E3A7FA00B21E0D /* TabbarControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF10B23E3A7FA00B21E0D /* TabbarControllerRouter.swift */; };
 		5AEEF11523E3A7FA00B21E0D /* GlobalTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF10D23E3A7FA00B21E0D /* GlobalTheme.swift */; };
 		5AEEF11623E3A7FA00B21E0D /* MatchesAdapter+Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF10F23E3A7FA00B21E0D /* MatchesAdapter+Config.swift */; };
+		5AEEF11C23E3A99800B21E0D /* BusinessesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF11B23E3A99800B21E0D /* BusinessesState.swift */; };
+		5AEEF11E23E3A9A500B21E0D /* BusinessesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF11D23E3A9A500B21E0D /* BusinessesActions.swift */; };
+		5AEEF12023E3A9E600B21E0D /* BusinessesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF11F23E3A9E600B21E0D /* BusinessesViewModel.swift */; };
+		5AEEF12223E3AA0000B21E0D /* BusinessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF12123E3AA0000B21E0D /* BusinessRow.swift */; };
+		5AEEF12423E3ABB700B21E0D /* BusinessesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF12323E3ABB700B21E0D /* BusinessesModel.swift */; };
+		5AEEF12623E3AC0F00B21E0D /* BusinessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF12523E3AC0F00B21E0D /* BusinessesViewController.swift */; };
+		5AEEF12823E3B53A00B21E0D /* BusinessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEEF12723E3B53A00B21E0D /* BusinessCell.swift */; };
+		5AEEF12A23E3B56700B21E0D /* BusinessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AEEF12923E3B56700B21E0D /* BusinessCell.xib */; };
 		9716375B23DE511400888D1C /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9716375A23DE511400888D1C /* APIKey.swift */; };
 		9762A92323DE2C1D005C3A4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9762A92223DE2C1D005C3A4D /* AppDelegate.swift */; };
 		9762A92C23DE2C1F005C3A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9762A92B23DE2C1F005C3A4D /* Assets.xcassets */; };
@@ -154,7 +160,7 @@
 		5AEEF01923E39B1500B21E0D /* CFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AEEF01B23E39B1500B21E0D /* CFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CFoundation.h; sourceTree = "<group>"; };
 		5AEEF01C23E39B1500B21E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AEEF02823E39C1400B21E0D /* Card+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Card+Theme.swift"; sourceTree = "<group>"; };
+		5AEEF02823E39C1400B21E0D /* BusinessCell+Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BusinessCell+Theme.swift"; sourceTree = "<group>"; };
 		5AEEF02923E39C1400B21E0D /* Decodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
 		5AEEF02A23E39C1400B21E0D /* UICollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		5AEEF02B23E39C1400B21E0D /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -168,8 +174,6 @@
 		5AEEF04C23E39C4E00B21E0D /* ScrollBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollBarView.swift; sourceTree = "<group>"; };
 		5AEEF04D23E39C4E00B21E0D /* SelectionListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionListView.swift; sourceTree = "<group>"; };
 		5AEEF04F23E39C4E00B21E0D /* TitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
-		5AEEF05123E39C4E00B21E0D /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
-		5AEEF05223E39C4E00B21E0D /* CardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		5AEEF05423E39C4E00B21E0D /* TitleViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewProtocol.swift; sourceTree = "<group>"; };
 		5AEEF05523E39C4E00B21E0D /* ImageDetailsCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetailsCellProtocol.swift; sourceTree = "<group>"; };
 		5AEEF05E23E39CC200B21E0D /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -219,6 +223,14 @@
 		5AEEF10B23E3A7FA00B21E0D /* TabbarControllerRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarControllerRouter.swift; sourceTree = "<group>"; };
 		5AEEF10D23E3A7FA00B21E0D /* GlobalTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTheme.swift; sourceTree = "<group>"; };
 		5AEEF10F23E3A7FA00B21E0D /* MatchesAdapter+Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MatchesAdapter+Config.swift"; sourceTree = "<group>"; };
+		5AEEF11B23E3A99800B21E0D /* BusinessesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesState.swift; sourceTree = "<group>"; };
+		5AEEF11D23E3A9A500B21E0D /* BusinessesActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesActions.swift; sourceTree = "<group>"; };
+		5AEEF11F23E3A9E600B21E0D /* BusinessesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesViewModel.swift; sourceTree = "<group>"; };
+		5AEEF12123E3AA0000B21E0D /* BusinessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRow.swift; sourceTree = "<group>"; };
+		5AEEF12323E3ABB700B21E0D /* BusinessesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesModel.swift; sourceTree = "<group>"; };
+		5AEEF12523E3AC0F00B21E0D /* BusinessesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesViewController.swift; sourceTree = "<group>"; };
+		5AEEF12723E3B53A00B21E0D /* BusinessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCell.swift; sourceTree = "<group>"; };
+		5AEEF12923E3B56700B21E0D /* BusinessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessCell.xib; sourceTree = "<group>"; };
 		5C389B0C2C526B4252DA6503 /* Pods_Modules_CFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Modules_CFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		944BF087E0B2657082783FDC /* Pods-Modules-BusinessesModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Modules-BusinessesModule.debug.xcconfig"; path = "Target Support Files/Pods-Modules-BusinessesModule/Pods-Modules-BusinessesModule.debug.xcconfig"; sourceTree = "<group>"; };
 		9716375A23DE511400888D1C /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
@@ -320,7 +332,7 @@
 		5AEEF02723E39C1400B21E0D /* ThemeStyles */ = {
 			isa = PBXGroup;
 			children = (
-				5AEEF02823E39C1400B21E0D /* Card+Theme.swift */,
+				5AEEF02823E39C1400B21E0D /* BusinessCell+Theme.swift */,
 			);
 			path = ThemeStyles;
 			sourceTree = "<group>";
@@ -375,8 +387,8 @@
 		5AEEF05023E39C4E00B21E0D /* CardCell */ = {
 			isa = PBXGroup;
 			children = (
-				5AEEF05123E39C4E00B21E0D /* CardCell.swift */,
-				5AEEF05223E39C4E00B21E0D /* CardCell.xib */,
+				5AEEF12723E3B53A00B21E0D /* BusinessCell.swift */,
+				5AEEF12923E3B56700B21E0D /* BusinessCell.xib */,
 			);
 			path = CardCell;
 			sourceTree = "<group>";
@@ -497,6 +509,8 @@
 			children = (
 				5AEEF0EE23E3A5A900B21E0D /* BusinessesModule.h */,
 				5AEEF0FD23E3A62D00B21E0D /* BusinessesModule.swift */,
+				5AEEF12123E3AA0000B21E0D /* BusinessRow.swift */,
+				5AEEF11723E3A96600B21E0D /* Businesses */,
 				5AEEF0EF23E3A5A900B21E0D /* Info.plist */,
 			);
 			path = BusinessesModule;
@@ -558,6 +572,42 @@
 				5AEEF10F23E3A7FA00B21E0D /* MatchesAdapter+Config.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		5AEEF11723E3A96600B21E0D /* Businesses */ = {
+			isa = PBXGroup;
+			children = (
+				5AEEF11A23E3A98000B21E0D /* View */,
+				5AEEF11923E3A97B00B21E0D /* ViewModel */,
+				5AEEF11823E3A97600B21E0D /* Model */,
+			);
+			path = Businesses;
+			sourceTree = "<group>";
+		};
+		5AEEF11823E3A97600B21E0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AEEF12323E3ABB700B21E0D /* BusinessesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5AEEF11923E3A97B00B21E0D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5AEEF11B23E3A99800B21E0D /* BusinessesState.swift */,
+				5AEEF11D23E3A9A500B21E0D /* BusinessesActions.swift */,
+				5AEEF11F23E3A9E600B21E0D /* BusinessesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5AEEF11A23E3A98000B21E0D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5AEEF12523E3AC0F00B21E0D /* BusinessesViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9762A91623DE2C1D005C3A4D = {
@@ -833,7 +883,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AEEF05A23E39C4E00B21E0D /* CardCell.xib in Resources */,
+				5AEEF12A23E3B56700B21E0D /* BusinessCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -974,7 +1024,7 @@
 				5AEEF0A623E3A2E600B21E0D /* Location.swift in Sources */,
 				5AEEF03623E39C1400B21E0D /* ScrollBarView+Rx.swift in Sources */,
 				5AEEF07E23E39CC200B21E0D /* NetworkingConfigurable.swift in Sources */,
-				5AEEF03223E39C1400B21E0D /* Card+Theme.swift in Sources */,
+				5AEEF03223E39C1400B21E0D /* BusinessCell+Theme.swift in Sources */,
 				5AEEF0A523E3A2E600B21E0D /* Business.swift in Sources */,
 				5AEEF08123E39CC200B21E0D /* NetworkingAdapter.swift in Sources */,
 				5AEEF03523E39C1400B21E0D /* String.swift in Sources */,
@@ -993,12 +1043,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AEEF12823E3B53A00B21E0D /* BusinessCell.swift in Sources */,
 				5AEEF05823E39C4E00B21E0D /* TitleCell.swift in Sources */,
 				5AEEF05623E39C4E00B21E0D /* ScrollBarView.swift in Sources */,
 				5AEEF05723E39C4E00B21E0D /* SelectionListView.swift in Sources */,
 				5AEEF05B23E39C4E00B21E0D /* TitleViewProtocol.swift in Sources */,
 				5AEEF05C23E39C4E00B21E0D /* ImageDetailsCellProtocol.swift in Sources */,
-				5AEEF05923E39C4E00B21E0D /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1032,7 +1082,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AEEF12023E3A9E600B21E0D /* BusinessesViewModel.swift in Sources */,
+				5AEEF12223E3AA0000B21E0D /* BusinessRow.swift in Sources */,
 				5AEEF0FE23E3A62D00B21E0D /* BusinessesModule.swift in Sources */,
+				5AEEF11C23E3A99800B21E0D /* BusinessesState.swift in Sources */,
+				5AEEF11E23E3A9A500B21E0D /* BusinessesActions.swift in Sources */,
+				5AEEF12423E3ABB700B21E0D /* BusinessesModel.swift in Sources */,
+				5AEEF12623E3AC0F00B21E0D /* BusinessesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1498,6 +1554,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = "Fast Foodz/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1518,6 +1575,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = "$(PRODUCT_MODULE_NAME)";
 				INFOPLIST_FILE = "Fast Foodz/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

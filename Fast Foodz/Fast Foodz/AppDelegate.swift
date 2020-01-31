@@ -30,7 +30,7 @@ class AppDelegate:
         window = UIWindow()
         
         // Configure networkign adapters
-//        MatchesAdapter.configurator()
+        BusinessAdapter.configurator()
         
         // App Theme
         ThemeContainer.defaultTheme = GlobalTheme()
