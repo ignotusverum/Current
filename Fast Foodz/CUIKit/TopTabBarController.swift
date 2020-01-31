@@ -262,4 +262,3 @@ open class TopTabBarController: UIViewController {
         setSelectedViewController(at: index)
     }
 }
-

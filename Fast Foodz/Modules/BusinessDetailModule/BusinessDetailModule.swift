@@ -28,6 +28,7 @@ public class BusinessDetailModuleContext: ModuleContextProtocol {
 
 public enum BusinessDetailsModuleEvents: EventProtocol {
     case callBusiness(String)
+    case shareURL(String)
 }
 
 public class BusinessDetailModules: ModuleProtocol, EventsProducer {

@@ -28,6 +28,23 @@ class BusinessDetailRoutingListener: ModuleEventsListener {
             })
             .disposed(by: module.disposeBag)
         
+        events.capture(case: BusinessDetailEvent.shareURL)
+            .toRoutableObservable()
+            .subscribe(onNext: { [weak module] urlPath in
+                guard let url = URL(string: urlPath) else {
+                        return
+                }
+                
+                let activityViewController = UIActivityViewController(activityItems : [url],
+                                                                      applicationActivities: nil)
+                activityViewController.popoverPresentationController?.sourceView = module?.rootViewController?.view
+                
+                module?.rootViewController?.present(activityViewController,
+                                                    animated: true,
+                                                    completion: nil)
+            })
+            .disposed(by: module.disposeBag)
+        
         
         return true
     }

@@ -9,17 +9,30 @@ import UIKit
 import MapKit
 import CoreLocation
 
-/// TODO: Move delegate to map configurator
+public struct MapCellConfig {
+    public var coordinates: CLLocationCoordinate2D
+    public var strokeColor: UIColor
+    public var strokeWidth: CGFloat
+    
+    public init(coordinates: CLLocationCoordinate2D,
+                strokeColor: UIColor,
+                strokeWidth: CGFloat) {
+        self.coordinates = coordinates
+        self.strokeColor = strokeColor
+        self.strokeWidth = strokeWidth
+    }
+}
+
 public class MapCell: UICollectionViewCell, MKMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet public weak var mapView: MKMapView?
     let locationManager = CLLocationManager()
     
     public var renderer: MKPolylineRenderer?
     
-    public var coordinates: CLLocationCoordinate2D = CLLocationCoordinate2D() {
-        didSet {
-            setupLocationServices()
-        }
+    var config: MapCellConfig?
+    public func configure(_ config: MapCellConfig) {
+        self.config = config
+        setupLocationServices()
     }
     
     private func setupLocationServices() {
@@ -41,6 +54,12 @@ public class MapCell: UICollectionViewCell, MKMapViewDelegate, CLLocationManager
     
     public func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
+        
+        if let config = config {
+            renderer?.lineWidth = config.strokeWidth
+            renderer?.strokeColor = config.strokeColor
+        }
+        
         return renderer!
     }
     
@@ -50,9 +69,10 @@ public class MapCell: UICollectionViewCell, MKMapViewDelegate, CLLocationManager
     }
     
     func processLocation(for latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        guard let config = config else { return }
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), addressDictionary: nil))
-        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude), addressDictionary: nil))
+        request.destination = MKMapItem(placemark: MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: config.coordinates.latitude, longitude: config.coordinates.longitude), addressDictionary: nil))
         request.requestsAlternateRoutes = true
         request.transportType = .automobile
 

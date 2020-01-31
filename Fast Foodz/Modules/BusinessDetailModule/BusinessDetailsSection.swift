@@ -11,11 +11,13 @@ struct BusinessDetailsSection: Equatable {
     let imageURL: URL?
     var title: String
     var coordinates: Coordinates
+    var yelpURLPath: String
     var phoneNumber: String
     
     init(model: Business) {
         imageURL = model.imageURL
         title = model.name
+        yelpURLPath = model.url
         coordinates = model.coordinates
         phoneNumber = model.phone
     }

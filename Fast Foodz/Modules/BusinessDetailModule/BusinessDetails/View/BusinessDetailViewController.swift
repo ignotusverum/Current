@@ -72,7 +72,15 @@ class BusinessDetailViewController: UIViewController, UICollectionViewDelegateFl
         
         title = "Details"
         
-        tabBarController?.tabBar.isHidden = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "share")!,
+                                                            style:.plain,
+                                                            target: nil,
+                                                            action: nil)
+     
+        navigationItem.rightBarButtonItem?.rx.tap.subscribe(onNext: { [weak self] in
+            guard let self = self else { return }
+            self.actions.onNext(.shareURL(self.datasource.yelpURLPath))
+        }).disposed(by: disposeBag)
         
         applyTheme()
         configureDatasource()
@@ -154,7 +162,6 @@ class BusinessDetailViewController: UIViewController, UICollectionViewDelegateFl
                                               .map(coordinates: model.coordinates)]
         
         model.phoneNumber.isEmpty ? () : rows.append(.numberButton(number: model.phoneNumber))
-        
         return AnimatableSectionModel(model: "",
                                       items: rows)
     }
@@ -164,7 +171,6 @@ extension BusinessDetailViewController {
     func configureCell(row: BusinessDetailCellType,
                        indexPath: IndexPath,
                        from collectionView: UICollectionView) -> UICollectionViewCell {
-        
         switch row {
         case let .header(title, imageURL):
             let cell: ImageTitleCell = collectionView.dequeueReusableCell(for: indexPath)
@@ -187,9 +193,15 @@ extension BusinessDetailViewController {
             
         case .map(let coordinates):
             let cell: MapCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.applyTheme()
             
-            cell.coordinates = CLLocationCoordinate2D(latitude: CLLocationDegrees(coordinates.latitude),
-                                                      longitude: CLLocationDegrees(coordinates.longitude))
+            let cellConfig = MapCellConfig(coordinates: CLLocationCoordinate2D(latitude: CLLocationDegrees(coordinates.latitude),
+                                                                               
+                                                                               longitude: CLLocationDegrees(coordinates.longitude)),
+                                           strokeColor: .color(forPalette: .bluCepheus),
+                                           strokeWidth: 4)
+            
+            cell.configure(cellConfig)
             
             return cell
             

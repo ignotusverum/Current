@@ -10,6 +10,7 @@ import CFoundation
 
 enum BusinessDetailsUIAction: EventProtocol {
     case callNumber(String)
+    case shareURL(String)
 }
 
 enum BusinessDetailsModelAction: EventProtocol {}

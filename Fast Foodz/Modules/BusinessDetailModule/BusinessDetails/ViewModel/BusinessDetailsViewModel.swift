@@ -32,20 +32,23 @@ class BusinessDetailsViewModel: BusinessDetailsViewModelProtocol {
     func transform(input: Observable<BusinessDetailsUIAction>,
                    scheduler: ImmediateSchedulerType) -> Observable<BusinessDetailsState> {
         Observable.feedbackLoop(initialState: BusinessDetailsState.details(BusinessDetailsSection(model: model)),
-                                       scheduler: scheduler,
-                                       reduce: { (state, action) -> BusinessDetailsState in
-                                        switch action {
-                                        case let .ui(action): return .reduce(state, action: action)
-                                        case let .model(action): return .reduce(state, model: action)
-                                        }
+                                scheduler: scheduler,
+                                reduce: { (state, action) -> BusinessDetailsState in
+                                    switch action {
+                                    case let .ui(action): return .reduce(state, action: action)
+                                    case let .model(action): return .reduce(state, model: action)
+                                    }
         }, feedback: { _ in input.map(BusinessDetailsActions.ui) },
            weakify(self,
                    default: .empty()) { (me: BusinessDetailsViewModel, state) in
                     .empty()
         })
             .sendSideEffects({ state in
-                input.capture(case: BusinessDetailsUIAction.callNumber)
-                    .map(BusinessDetailsModuleEvents.callBusiness)
+                Observable.merge(
+                    input.capture(case: BusinessDetailsUIAction.callNumber)
+                        .map(BusinessDetailsModuleEvents.callBusiness),
+                    input.capture(case: BusinessDetailsUIAction.shareURL)
+                        .map(BusinessDetailsModuleEvents.shareURL))
             }, to: events.asObserver())
     }
 }
