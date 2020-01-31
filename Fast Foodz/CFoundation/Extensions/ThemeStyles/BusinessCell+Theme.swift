@@ -11,7 +11,7 @@ import ThemeManager
 
 public extension BusinessCell {
     func applyTheme(usingTheme theme: ThemeProtocol = ThemeContainer.defaultTheme) {
-        detailsView.backgroundColor = theme.color(forColorPalette: .white)
+        backgroundColor = theme.color(forColorPalette: .white)
         
         subtitleLabel.applyLabelStyle(.title(attribute: .regular),
                                       usingTheme: theme,
@@ -19,11 +19,11 @@ public extension BusinessCell {
                                         label.textColor = theme.color(forColorPalette: .grey300)
         })
         
-        [titleLabel,
-         bottomSubtitleLabel].applyLabelStyle(.subtitle(attribute: .bold),
+        [titleLabel].applyLabelStyle(.subtitle(attribute: .bold),
                                               usingTheme: theme)
         
-        layer.cornerRadius = 6
-        layer.masksToBounds = true
+        setBorder(.bottom,
+                  withColor: theme.color(forColorPalette: .black),
+                  andThickness: 2)
     }
 }

@@ -15,7 +15,6 @@ public class BusinessCell:
     @IBOutlet public weak var detailsView: UIView!
     @IBOutlet public weak var titleLabel: UILabel!
     @IBOutlet public weak var subtitleLabel: UILabel!
-    @IBOutlet public weak var bottomSubtitleLabel: UILabel!
-
+    
     @IBOutlet public weak var imageView: UIImageView!
 }

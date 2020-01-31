@@ -18,17 +18,22 @@ enum BusinessType: String, Equatable {
 
 struct BusinessRow: Equatable {
     let type: BusinessType
-    let price: String
     let title: String
-    let distance: String
+    let subtitle: String
     
     let imageUrl: URL?
     
     init(model: Business) {
         type = .mexican
         imageUrl = model.imageURL
-        price = model.price ?? "-"
+        
         title = model.name
-        distance = "\(Int(model.distance)) miles"
+        
+        let distance = "\(Int(model.distance)) miles"
+        if let price = model.price {
+            subtitle = "\(price) * \(distance)"
+        } else {
+            subtitle = "\(distance)"
+        }
     }
 }

@@ -17,6 +17,19 @@ class BusinessesRoutingListener: ModuleEventsListener {
     func listenEvents(from module: AnyEventsProducerModule,
                       events: Observable<BusinessesEvent>) -> Bool {
         
+        events.capture(case: BusinessesEvent.businessIdSelected)
+            .toRoutableObservable()
+            .subscribe(onNext: { businessId in
+                let detailsStep = PresentableRoutingStep(withStep: .businessDetails(),
+                                                         presentationMode: .push(withCloseButton: .none),
+                                                         animated: true)
+                
+                self.router.route(to: detailsStep)
+                
+            })
+            .disposed(by: module.disposeBag)
+            
+        
         return true
     }
 }

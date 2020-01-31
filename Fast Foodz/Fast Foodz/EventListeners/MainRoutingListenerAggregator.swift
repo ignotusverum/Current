@@ -9,8 +9,7 @@
 import MERLin
 
 class MainRoutingListenerAggregator: ModuleEventsListenersAggregator {
-    var handledRoutingContext: [String]? = ["main",
-                                            "deeplink"]
+    var handledRoutingContext: [String]? = ["main"]
     
     let moduleListeners: [AnyModuleEventsListener]
     

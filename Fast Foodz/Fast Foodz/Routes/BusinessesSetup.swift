@@ -13,7 +13,7 @@ import Foundation
 typealias BusinessesEvent = BusinessesModuleEvents
 
 extension ModuleRoutingStep {
-    static func matches() -> ModuleRoutingStep {
+    static func businesses() -> ModuleRoutingStep {
         let context = BusinessesModuleContext(routingContext: "main")
         return ModuleRoutingStep(withMaker: context)
     }

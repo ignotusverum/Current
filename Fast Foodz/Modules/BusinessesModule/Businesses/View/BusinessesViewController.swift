@@ -27,13 +27,8 @@ class BusinessesViewController: UIViewController, UICollectionViewDelegateFlowLa
     let collectionView = UICollectionView(frame: .zero,
                                           collectionViewLayout: UICollectionViewFlowLayout()) <~ {
                                             let layout = UICollectionViewFlowLayout()
-                                            
-                                            layout.sectionInset = UIEdgeInsets(top: 10,
-                                                                               left: 7,
-                                                                               bottom: 20,
-                                                                               right: 7)
-                                            
-                                            layout.minimumLineSpacing = 20
+
+                                            layout.minimumLineSpacing = 0
                                             layout.minimumInteritemSpacing = 0
                                             
                                             $0.collectionViewLayout = layout
@@ -192,12 +187,8 @@ class BusinessesViewController: UIViewController, UICollectionViewDelegateFlowLa
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let cellWidth = collectionView.frame.width / 2 - 14 // 14 - padding from left/right
-        let cellHeight = cellWidth * 1.75
-        
-        return CGSize(width: cellWidth,
-                      height: cellHeight)
+        CGSize(width: collectionView.frame.width,
+               height: 80)
     }
     
     private func createAnimatableSection(_ rows: [BusinessRow])-> AnimatableSectionModel<String, BusinessRow> {
@@ -226,8 +217,7 @@ extension BusinessesViewController {
         }
         
         cell.titleLabel.text = row.title
-        cell.subtitleLabel.text = row.price
-        cell.bottomSubtitleLabel.text = row.distance
+        cell.subtitleLabel.text = row.subtitle
         cell.applyTheme()
         
         return cell

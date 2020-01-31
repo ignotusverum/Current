@@ -28,7 +28,7 @@ class TabBarControllerRouter: Router {
         let tabbarController = UITabBarController()
         guard let viewControllerFactory = viewControllersFactory else { return tabbarController }
         
-        let matchesViewController = viewControllerFactory.viewController(for: PresentableRoutingStep(withStep: .matches(),
+        let matchesViewController = viewControllerFactory.viewController(for: PresentableRoutingStep(withStep: .businesses(),
                                                                                                      presentationMode: .none))
         
         let matchesNavigationController = UINavigationController(rootViewController: matchesViewController)
@@ -36,6 +36,7 @@ class TabBarControllerRouter: Router {
         
         /// TODO: Add some kind of initial splash screen to follow this logic, could be A/B Tests
         AppDelegate.shared.window?.transitionToRootController(tabbarController)
+        topViewController = tabbarController
         
         return tabbarController
     }

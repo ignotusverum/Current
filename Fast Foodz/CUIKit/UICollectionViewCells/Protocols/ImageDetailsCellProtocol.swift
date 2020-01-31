@@ -15,5 +15,4 @@ public protocol ImageDetailsCellProtocol where Self: UICollectionViewCell {
     var detailsView: UIView! { get set }
     var titleLabel: UILabel! { get set }
     var subtitleLabel: UILabel! { get set }
-    var bottomSubtitleLabel: UILabel! { get set }
 }
