@@ -193,9 +193,15 @@ extension BusinessesViewController {
             cell.imageView.image = UIImage(named: rowType.rawValue)
         }
         
+        
         cell.titleLabel.text = row.title
-        cell.subtitleLabel.text = row.subtitle
+        
         cell.applyTheme()
+        
+        let subtitleCopy = row.getSubtitleCopy(regularAttributes:
+            [NSAttributedString.Key.foregroundColor: UIColor.color(forPalette: .lilacGrey)],
+                                               priceAttributes: [NSAttributedString.Key.foregroundColor: UIColor.color(forPalette: .pickleGreen)])
+        cell.subtitleLabel.attributedText = subtitleCopy
         
         return cell
     }

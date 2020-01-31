@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AQ-bL-QwU">
-                                <rect key="frame" x="8" y="25" width="288" height="21"/>
+                                <rect key="frame" x="8" y="27" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,7 +47,7 @@
                             <constraint firstItem="UzP-Zj-cM2" firstAttribute="top" secondItem="hn9-l0-TlA" secondAttribute="top" id="eg9-KJ-AHb"/>
                             <constraint firstItem="UzP-Zj-cM2" firstAttribute="trailing" secondItem="hn9-l0-TlA" secondAttribute="trailingMargin" id="g0e-w3-677"/>
                             <constraint firstItem="UzP-Zj-cM2" firstAttribute="leading" secondItem="hn9-l0-TlA" secondAttribute="leadingMargin" id="hfg-MQ-ZG2"/>
-                            <constraint firstItem="5AQ-bL-QwU" firstAttribute="top" secondItem="UzP-Zj-cM2" secondAttribute="bottom" constant="4" id="lAO-PU-MGP"/>
+                            <constraint firstItem="5AQ-bL-QwU" firstAttribute="top" secondItem="UzP-Zj-cM2" secondAttribute="bottom" constant="6" id="lAO-PU-MGP"/>
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron" translatesAutoresizingMaskIntoConstraints="NO" id="FjL-4O-hYm">
@@ -73,6 +73,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="496" height="314"/>
             <connections>
+                <outlet property="chevroneImageView" destination="FjL-4O-hYm" id="JKq-2L-xqY"/>
                 <outlet property="imageView" destination="tJ8-mR-r7b" id="6Z4-SH-8S7"/>
                 <outlet property="subtitleLabel" destination="5AQ-bL-QwU" id="ILi-fH-KA3"/>
                 <outlet property="titleLabel" destination="UzP-Zj-cM2" id="PlY-CB-9sn"/>

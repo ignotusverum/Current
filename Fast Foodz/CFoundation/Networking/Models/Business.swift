@@ -15,6 +15,14 @@ public enum BusinessType: String, Equatable {
     case burgers
 }
 
+public enum PricePointType: String, Equatable {
+    case low = "$"
+    case medium = "$$"
+    case high = "$$$"
+    case luxury = "$$$$"
+    case undefined
+}
+
 public struct Business: BusinessProtocol, Decodable, Equatable {
     public let id: String
     public let alias: String
@@ -36,6 +44,11 @@ public struct Business: BusinessProtocol, Decodable, Equatable {
     
     public var type: BusinessType? {
         categories.compactMap { BusinessType(rawValue: $0.alias) }.first
+    }
+    
+    public var pricePoint: PricePointType? {
+        guard let price = price else { return nil }
+        return PricePointType(rawValue: price) 
     }
     
     enum CodingKeys: String, CodingKey {

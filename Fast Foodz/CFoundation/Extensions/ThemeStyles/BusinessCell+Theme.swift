@@ -14,16 +14,19 @@ public extension BusinessCell {
         backgroundColor = theme.color(forColorPalette: .white)
         
         subtitleLabel.applyLabelStyle(.title(attribute: .regular),
-                                      usingTheme: theme,
-                                      customizing: { (label, _) in
-                                        label.textColor = theme.color(forColorPalette: .grey300)
+                                      usingTheme: theme)
+        
+        titleLabel.applyLabelStyle(.subtitle(attribute: .bold),
+                                   usingTheme: theme,
+                                   customizing: { (label, _) in
+                                    label.textColor = theme.color(forColorPalette: .deepIndigo)
         })
         
-        [titleLabel].applyLabelStyle(.subtitle(attribute: .bold),
-                                              usingTheme: theme)
+        imageView.tintColor = theme.color(forColorPalette: .deepIndigo)
+        chevroneImageView.tintColor = theme.color(forColorPalette: .deepIndigo)
         
         setBorder(.bottom,
-                  withColor: theme.color(forColorPalette: .black),
+                  withColor: theme.color(forColorPalette: .londonSky),
                   andThickness: 2)
     }
 }

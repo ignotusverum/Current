@@ -10,7 +10,6 @@ import RxDataSources
 
 struct BusinessRow: Equatable {
     let title: String
-    let subtitle: String
     
     let model: Business
     let type: BusinessType?
@@ -18,14 +17,22 @@ struct BusinessRow: Equatable {
     init(model: Business) {
         self.model = model
         title = model.name
-        
         type = model.type
+    }
+    
+    func getSubtitleCopy(regularAttributes: [NSAttributedString.Key: Any],
+                         priceAttributes: [NSAttributedString.Key: Any])-> NSAttributedString {
         
-        let distance = "\(Int(model.distance)) miles"
-        if let price = model.price {
-            subtitle = "\(price) * \(distance)"
-        } else {
-            subtitle = "\(distance)"
+        var result = NSMutableAttributedString()
+        let distanceCopy = LengthFormatter().string(fromValue: Double(model.distance),
+                                                    unit: .mile)
+        let subtitleCopy = "$$$$ • \(distanceCopy)"
+        result = NSMutableAttributedString(string: subtitleCopy, attributes: regularAttributes)
+        
+        if let pricePoint = model.pricePoint {
+            result.addAttributes(priceAttributes, range: NSMakeRange(0, pricePoint.rawValue.count))
         }
+        
+        return result
     }
 }
